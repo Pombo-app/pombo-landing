@@ -74,20 +74,11 @@ section{padding:clamp(4.5rem,9vw,7.5rem) 0;position:relative}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 
 /* hero */
-.hero{min-height:100svh;display:flex;align-items:center;padding-top:7rem;padding-bottom:4rem;overflow:hidden}
 .hero-glow{position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:min(1100px,140vw);height:min(1100px,140vw);pointer-events:none;background:radial-gradient(circle,rgba(246,133,27,0.15) 0%,rgba(246,133,27,0.04) 38%,transparent 68%)}
-.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);gap:3rem;align-items:center}
-.hero h1{font-size:clamp(2.9rem,7.4vw,5.2rem)}
-.hero-triad{font-size:clamp(1.3rem,2.9vw,1.85rem);font-weight:500;letter-spacing:-0.02em;color:var(--text-1);margin-top:1rem;line-height:1.3}
-.hero-triad span{color:var(--accent)}
 .hero-sub{margin:1rem auto 0;font-size:1.02rem;max-width:56ch}
-.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.1rem}
-.hero-trust{display:flex;flex-wrap:wrap;gap:1.75rem;margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--border);font-size:0.85rem;color:var(--text-3);list-style:none}
-.hero-trust li{display:flex;align-items:center;gap:0.5rem}
-.hero-trust svg{width:15px;height:15px;color:var(--accent);flex:none}
 
 /* hero: the gate */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;gap:0;padding:5.25rem 0 2.5rem;overflow:hidden}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:5.25rem 0 2.5rem;overflow:hidden}
 .hero-top{position:relative;z-index:2;text-align:center;max-width:1040px;margin-inline:auto;padding-inline:1.5rem}
 .hero h1{font-size:clamp(2.4rem,6.1vw,4.05rem);letter-spacing:-0.035em}
 .hero-triad{font-size:clamp(1.1rem,2.3vw,1.5rem);font-weight:500;letter-spacing:-0.02em;color:var(--text-1);margin-top:0.7rem;line-height:1.3}
@@ -200,12 +191,13 @@ section{padding:clamp(4.5rem,9vw,7.5rem) 0;position:relative}
 
 /* earn */
 .earn-figure{background:var(--elevated);border:1px solid var(--accent-line);border-radius:20px;padding:2.25rem;text-align:center}
-.earn-flow{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
-.earn-node{background:var(--card);border:1px solid var(--border-l);border-radius:12px;padding:0.85rem 1.15rem;min-width:130px}
+.earn-flow{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:nowrap;margin-bottom:1.75rem}
+.earn-node{background:var(--card);border:1px solid var(--border-l);border-radius:12px;padding:0.85rem 1.15rem;min-width:130px;flex:0 1 auto}
+.earn-node strong,.earn-node span{white-space:nowrap}
 .earn-node strong{display:block;font-size:0.92rem}
 .earn-node span{font-size:0.76rem;color:var(--text-3)}
 .earn-node.accent{border-color:var(--accent-line);background:var(--accent-soft)}
-.earn-arrow{color:var(--accent);font-size:1.15rem}
+.earn-arrow{color:var(--accent);font-size:1.15rem;flex:none}
 .earn-big{font-size:clamp(4rem,12vw,7rem);font-weight:700;color:var(--accent);line-height:0.9;letter-spacing:-0.04em;display:block}
 .earn-cap{font-size:1.05rem;color:var(--text-1);font-weight:500;margin-top:0.75rem}
 .earn-note{font-size:0.98rem;color:var(--text-2);max-width:52ch;margin:1.9rem auto 0;padding-top:1.6rem;border-top:1px solid var(--border);text-wrap:balance}
@@ -272,6 +264,35 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
   .split{gap:2.5rem}
   .hero-trust{gap:0.85rem 1.25rem}
 }
+@media (max-width:600px){
+  .hero h1{font-size:2rem;letter-spacing:-0.03em}
+  .hero-triad{font-size:1.05rem;margin-top:0.55rem}
+  .hero-sub{font-size:0.95rem;margin-top:0.8rem;max-width:38ch}
+  .sec-title{font-size:1.55rem}
+  .sec-desc{font-size:0.95rem;margin-top:0.8rem}
+  .manifesto-statement{font-size:1.75rem}
+  .manifesto-sub{font-size:1rem;margin-top:1rem}
+  .cta h2{font-size:1.8rem}
+  .cta p{font-size:1rem;margin-bottom:1.75rem}
+  .gt-rule{font-size:1rem}
+  .gt-conseq{font-size:0.84rem}
+  .hood-two-col h3{font-size:1.2rem}
+  .hood-desc{font-size:0.92rem}
+  .points p,.pillar p,.type p,.tl-item p,.faq p{font-size:0.92rem}
+  .faq summary{font-size:0.95rem}
+  .tl-head h3{font-size:1.05rem}
+  .pillar-num{font-size:0.98rem}
+  .item h3{font-size:1.1rem}
+  section{padding:3rem 0}
+  .sec-head{margin-bottom:2rem}
+  .hero-actions .btn{padding:0.75rem 1.25rem;font-size:0.9rem}
+  .container{padding:0 1.15rem}
+  .earn-figure{padding:1.5rem 0.85rem}
+  .earn-flow{gap:0.4rem}
+  .earn-node{min-width:auto;padding:0.6rem 0.65rem}
+  .earn-node strong{font-size:0.85rem}
+  .earn-node span{font-size:0.7rem}
+}
 @media (max-width:520px){
   body{font-size:16px}
   .tab span{display:none}
@@ -307,7 +328,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
 .mreact .me{font-size:1.35rem;line-height:1;margin:-4px -2px;display:inline-block}
 .mtime{flex-shrink:0;margin-left:auto;font-size:0.75rem;color:rgba(255,255,255,0.40)}
 .mock-typing{padding:0.25rem 1rem 0.5rem;font-size:0.875rem;color:rgba(255,255,255,0.30);background:var(--bg);min-height:1.85rem;box-sizing:border-box}
-.mock-typing.is-quiet{visibility:hidden}
+.mock-typing.is-quiet .mt-inner{visibility:hidden}
 .typing-dot{width:8px;height:8px;background-color:rgba(255,255,255,0.4);border-radius:50%;display:inline-block;margin:0 2px;animation:mock-bounce 1.4s infinite ease-in-out both}
 .typing-dot:nth-of-type(1){animation-delay:-0.32s}
 .typing-dot:nth-of-type(2){animation-delay:-0.16s}
@@ -1217,7 +1238,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
         <div class="mgroup" data-who="luna"><span class="mrail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" width="46" height="46" style="display:block"><defs><clipPath id="avatar-clip-ffgui7"><rect width="46" height="46" rx="23"/></clipPath></defs><g clip-path="url(#avatar-clip-ffgui7)"><rect width="46" height="46" fill="#241f11"/><g transform="rotate(72 23 23)"><path d="M16.68,11.46 C17.64,10.69 18.31,4.63 19.28,3.37 C20.25,2.11 25.06,-1.49 26.02,-0.64 C26.97,0.21 27.68,10.18 28.42,11.52 C29.16,12.86 31.57,12.21 33.13,12.24 C34.69,12.27 42.56,11.06 43.39,11.82 C44.21,12.59 41.53,18.21 41.05,19.58 C40.56,20.95 39.05,23.91 38.72,25.01 C38.40,26.10 38.22,28.98 37.95,30.06 C37.68,31.14 36.55,34.02 36.13,35.36 C35.71,36.70 34.99,42.61 33.93,42.95 C32.88,43.29 27.26,39.47 25.96,38.64 C24.67,37.81 22.81,34.42 21.47,34.97 C20.13,35.53 14.44,43.63 13.09,43.99 C11.74,44.34 8.64,39.93 8.52,38.38 C8.40,36.83 12.19,30.34 11.90,29.08 C11.62,27.82 6.69,27.16 5.77,26.26 C4.86,25.37 3.14,21.66 3.11,20.46 C3.08,19.26 4.77,15.74 5.48,14.73 C6.20,13.72 8.82,11.09 9.99,10.75 C11.15,10.41 15.71,12.23 16.68,11.46 M18.44,21.19 C18.23,20.86 17.40,19.93 17.27,19.54 C17.15,19.15 16.93,17.72 17.21,17.45 C17.48,17.18 19.53,17.07 19.94,16.95 C20.35,16.84 20.91,16.58 21.13,16.33 C21.35,16.08 21.75,14.72 22.02,14.54 C22.29,14.35 23.34,14.57 23.73,14.55 C24.12,14.53 25.34,14.28 25.74,14.36 C26.14,14.44 27.49,14.97 27.58,15.35 C27.68,15.72 26.75,17.55 26.65,17.96 C26.55,18.37 26.48,18.99 26.59,19.30 C26.70,19.62 27.68,20.64 27.70,20.97 C27.73,21.30 27.01,22.10 26.84,22.45 C26.66,22.79 26.27,23.98 25.99,24.28 C25.72,24.59 24.59,25.49 24.22,25.39 C23.84,25.28 22.72,23.57 22.42,23.27 C22.11,22.97 21.61,22.61 21.29,22.55 C20.96,22.49 19.58,22.82 19.29,22.68 C18.99,22.53 18.65,21.51 18.44,21.19" fill="#b6456d"/></g><path d="M15.514814240021089 18.888516264784815 Q18.086081427218673 15.539080776005083 20.657348614416257 18.776573037739187" fill="none" stroke="#241f11" stroke-width="1.6620140156154333" stroke-linecap="round" opacity="1"/><path d="M26.731595450254165 16.70912381679184 Q29.411480476125796 13.17258100381004 32.09136550199743 16.508975884039966" fill="none" stroke="#241f11" stroke-width="1.7725205029454827" stroke-linecap="round" opacity="1"/><path d="M18.47333219753206 27.623628287622935 Q23.668741146009417 31.483745766866207 28.864150094486774 25.820947395584405" fill="none" stroke="#241f11" stroke-width="1.656" stroke-linecap="round" opacity="1"/><path d="M0,0 h46 v46 h-46 Z M2.76,2.76 v40.480000000000004 h40.480000000000004 v-40.480000000000004 Z" fill="#241f11" fill-rule="evenodd"/></g></svg></span><div class="mstack"><div class="mbub"><div class="msender" style="color:#b6456d">Luna</div><div class="mtext">drove 40 minutes out of the city. zero regrets</div><div class="mfoot"><span class="mreacts"><span class="mreact"><span class="me">🔥</span>3</span></span><span class="mtime">23:18</span></div></div></div></div>
         <div class="mgroup" data-who="tomas"><span class="mrail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" width="46" height="46" style="display:block"><defs><clipPath id="avatar-clip-8ljt3e"><rect width="46" height="46" rx="23"/></clipPath></defs><g clip-path="url(#avatar-clip-8ljt3e)"><rect width="46" height="46" fill="#281d12"/><g transform="rotate(19 23 23)"><path d="M12.98,13.82 C13.20,12.38 11.24,4.90 11.71,3.05 C12.18,1.20 16.10,-4.03 17.51,-3.98 C18.92,-3.92 24.11,1.94 25.21,3.58 C26.32,5.22 27.12,11.09 28.11,11.78 C29.10,12.47 32.96,10.33 34.73,10.20 C36.49,10.07 43.85,9.68 45.06,10.52 C46.26,11.36 46.81,16.76 46.28,18.26 C45.76,19.76 40.91,23.75 40.01,24.94 C39.11,26.13 37.91,28.49 37.65,29.68 C37.40,30.87 38.00,35.10 37.58,36.36 C37.16,37.62 34.70,40.99 33.63,41.78 C32.55,42.56 28.61,43.70 27.26,43.91 C25.90,44.12 21.88,44.18 20.64,43.76 C19.39,43.34 16.20,40.79 15.32,39.86 C14.44,38.92 13.12,35.58 12.19,34.80 C11.25,34.03 7.77,33.14 6.33,32.43 C4.89,31.72 -0.93,29.27 -1.60,28.01 C-2.28,26.75 -1.33,21.52 -0.17,20.36 C1.00,19.20 8.20,17.56 9.57,16.88 C10.94,16.20 12.76,15.26 12.98,13.82 M23.46,18.36 C23.43,17.88 23.14,15.64 23.39,15.43 C23.64,15.22 25.47,16.07 25.88,16.33 C26.29,16.59 26.94,17.93 27.31,17.91 C27.69,17.90 29.03,16.29 29.48,16.18 C29.92,16.06 31.51,16.45 31.60,16.82 C31.68,17.18 30.39,19.24 30.30,19.67 C30.20,20.10 30.37,20.58 30.65,20.93 C30.93,21.28 32.90,22.69 32.94,23.05 C32.99,23.41 31.56,24.32 31.10,24.39 C30.64,24.46 28.84,23.56 28.51,23.71 C28.17,23.87 28.13,25.47 27.86,25.87 C27.59,26.27 26.22,27.66 25.91,27.55 C25.59,27.43 25.02,25.19 24.86,24.75 C24.69,24.31 24.70,23.45 24.33,23.29 C23.95,23.14 21.60,23.49 21.25,23.27 C20.89,23.05 20.66,21.56 20.92,21.22 C21.17,20.87 23.43,20.29 23.70,19.99 C23.96,19.70 23.49,18.83 23.46,18.36" fill="#cc9c5e"/></g><line x1="14.471121059520089" y1="17.49783701237236" x2="20.074457688019322" y2="17.546103065312455" stroke="#281d12" stroke-width="2.4011371731770037" stroke-linecap="round" opacity="1"/><line x1="25.40222391340599" y1="18.543129830953628" x2="31.799913307227598" y2="18.19129301391825" stroke="#281d12" stroke-width="2.2366199267971516" stroke-linecap="round" opacity="1"/><path d="M16.666803902989837 25.97390695032412 Q23.313664824441076 32.07441238869401 29.960525745892316 26.049644743124304" fill="none" stroke="#281d12" stroke-width="1.7939999999999998" stroke-linecap="round" opacity="1"/><path d="M0,0 h46 v46 h-46 Z M2.76,2.76 v40.480000000000004 h40.480000000000004 v-40.480000000000004 Z" fill="#281d12" fill-rule="evenodd"/></g></svg></span><div class="mstack"><div class="mbub first"><div class="msender" style="color:#cc9c5e">Tomás</div><div class="mtext">next one peaks in August</div><div class="mfoot"><span class="mtime">23:20</span></div></div><div class="mbub last"><div class="mtext">road trip?</div><div class="mfoot"><span class="mreacts"><span class="mreact"><span class="me">🚀</span>2</span></span><span class="mtime">23:21</span></div></div></div></div>
       </div>
-      <div class="mock-typing is-quiet"><span class="mt-name"></span> typing<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></div>
+      <div class="mock-typing is-quiet"><span class="mt-inner"><span class="mt-name"></span> typing<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></span></div>
       <div class="mock-foot">
         <div class="mock-input">Message #stargazing</div>
         <div class="mock-send"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 12L3.27 3.13a.6.6 0 01.83-.72l17 8.87a.6.6 0 010 1.06l-17 8.87a.6.6 0 01-.83-.72L6 12zm0 0h7"/></svg></div>
@@ -1428,9 +1449,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       <span class="earn-big">0%</span>
       <p class="earn-cap">is what Pombo takes from what you make.</p>
       <p class="earn-note">
-        The payment goes from your subscriber to you, wallet to wallet — no
-        escrow, no balance to withdraw, nobody in the middle with a hand out.
-        Set the price in POL, USDC, DATA or a token of your own.
+        It goes from your subscriber to you, wallet to wallet — no escrow, no balance to withdraw, nobody in the middle. Set the price in POL, USDC, DATA or a token of your own.
       </p>
     </div>
   </div>
@@ -1514,10 +1533,9 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                                 on the Streamr Network.
                             </p>
                             <p class="hood-panel-desc">
-                                Everything from who can join to who can publish is enforced on-chain.
-                                When you send a message, it's published to the network and delivered
-                                to everyone in the channel in real-time — no central server involved.
-                                Your message history is kept on a cluster of storage nodes of your choice.
+                                Who can join and who can publish is enforced on-chain. A message reaches
+                                everyone in the channel in real time, with no central server in between,
+                                and history lives on storage nodes of your choice.
                             </p>
                             <p class="hood-panel-desc">
                                 Live signals — like who's online, who's typing, and peer-to-peer file
@@ -1686,7 +1704,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                         <div class="storage-callout-icon">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
                         </div>
-                        <p><strong>Regardless of which option you choose</strong>, storage nodes only hold encrypted data. Decryption keys never leave your device — only you and your recipients can read your messages.</p>
+                        <p><strong>Either way</strong>, storage nodes hold only encrypted data. The keys never leave your device.</p>
                     </div>
                 </div>
 
@@ -1779,7 +1797,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                         <div class="storage-callout-icon" style="background:rgba(234,179,8,0.1); color:#eab308;">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
                         </div>
-                        <p><strong style="color:#eab308;">Strong passwords matter.</strong> Your passwords protect your encrypted channels, your account, and your backups. Use long, unique passwords and store them safely — there is no "Forgot password" button.</p>
+                        <p><strong style="color:#eab308;">Strong passwords matter.</strong> They protect your channels, your account and your backups — and there is no "Forgot password" button.</p>
                     </div>
                 </div>
 
@@ -1789,9 +1807,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                         <div>
                             <h3 class="own-title" style="font-size:1.5rem;">Push notifications.<br>Privacy layer added.</h3>
                             <p class="hood-panel-desc">
-                                Yes, notifications still reach your phone through Google FCM or Apple APNs — every app needs that last-mile delivery.
-                                The difference is what they see. In most apps, Google and Apple know exactly who is messaging who and when.
-                                Pombo adds a P2P relay layer that strips that metadata before it ever reaches them.
+                                Notifications still reach your phone through Google or Apple — every app needs that last mile.
+                                The difference is what they learn. In most apps they see who is messaging whom, and when. Here a relay layer strips that before it reaches them.
                             </p>
                             <div class="push-features-new">
                                 <div class="push-feature-new">
@@ -1909,23 +1926,23 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     <div class="faq reveal">
       <details>
         <summary>Do I need to know anything about crypto?</summary>
-        <p>To talk, no. Pombo makes a key for you in the background and you never have to think about it. You touch the chain three times: setting up your message inbox, creating a channel, and subscribing to a paid one. The app shows you the cost before you confirm.</p>
+        <p>To talk, no. A key is made for you in the background. You touch the chain three times: setting up your inbox, creating a channel, and subscribing to a paid one — and the app shows the cost first.</p>
       </details>
       <details>
         <summary>What does Pombo cost?</summary>
-        <p>Using it is free. Creating a channel costs a small Polygon network fee, in the order of cents, paid to the network. Paid channels charge whatever their owner sets, and all of it goes to the owner.</p>
+        <p>Using it is free. Creating a channel costs a Polygon network fee, cents, paid to the network. Paid channels charge what their owner sets, and all of it reaches the owner.</p>
       </details>
       <details>
         <summary>Who can read my messages?</summary>
-        <p>The people in the room. Direct messages and private channels are encrypted on your own device before they go anywhere, and the keys stay there. Public channels are public by design — that is the point of them.</p>
+        <p>The people in the room. Direct messages and private channels are encrypted on your device before they go anywhere, and the keys stay there. Public channels are public by design.</p>
       </details>
       <details>
         <summary>What happens if Pombo shuts down?</summary>
-        <p>Your channels are registered on-chain, and your history lives on the storage cluster you chose when you created them — the default one, or a node you run yourself. Either way it is not a Pombo server, because there is no Pombo server. The protocol is open and the clients are open source, so anyone can build another way in.</p>
+        <p>Your channels are registered on-chain, and your history lives on the storage cluster you chose — the default one, or a node you run. Neither is a Pombo server, because there is none. The protocol and the clients are open, so anyone can build another way in.</p>
       </details>
       <details>
         <summary>Can I use it on my phone?</summary>
-        <p>Two ways. Pombo runs in any modern browser and installs to your home screen like a native app. There is also a native Android client — real Kotlin, not a wrapped web page — that speaks the same protocol, so both talk on the same channels and the same DMs. It is still in beta, so you get it as an <a href="https://github.com/Ocnrb/Pombo-Android/releases/latest" target="_blank" rel="noopener" style="color:var(--accent)">APK from GitHub</a> rather than from a store.</p>
+        <p>Two ways. It runs in any modern browser and installs to your home screen. There is also a native Android client — real Kotlin, not a wrapped page — on the same protocol, so both talk on the same channels. It is in beta, so it comes as an <a href="https://github.com/Ocnrb/Pombo-Android/releases/latest" target="_blank" rel="noopener" style="color:var(--accent)">APK from GitHub</a> rather than from a store.</p>
       </details>
     </div>
   </div>
@@ -1964,11 +1981,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"Do I need to know anything about crypto?","acceptedAnswer":{"@type":"Answer","text":"To talk, no. Pombo makes a key for you in the background. You touch the chain three times: setting up your message inbox, creating a channel, and subscribing to a paid one. The app shows you the cost before you confirm."}},
-    {"@type":"Question","name":"What does Pombo cost?","acceptedAnswer":{"@type":"Answer","text":"Using it is free. Creating a channel costs a small Polygon network fee paid to the network. Paid channels charge whatever their owner sets, and all of it goes to the owner."}},
-    {"@type":"Question","name":"Who can read my messages?","acceptedAnswer":{"@type":"Answer","text":"The people in the room. Direct messages and private channels are encrypted on your own device before they go anywhere, and the keys stay there."}},
-    {"@type":"Question","name":"What happens if Pombo shuts down?","acceptedAnswer":{"@type":"Answer","text":"Channels are registered on-chain, and history lives on the storage cluster you chose when you created them — the default one, or a node you run yourself. There is no Pombo server. The protocol is open and the clients are open source."}},
-    {"@type":"Question","name":"Can I use it on my phone?","acceptedAnswer":{"@type":"Answer","text":"Two ways. Pombo runs in any modern browser and installs to your home screen like a native app. There is also a native Android client that speaks the same protocol, so both talk on the same channels and DMs. It is still in beta and is distributed as an APK from GitHub rather than from a store."}}
+    {"@type":"Question","name":"Do I need to know anything about crypto?","acceptedAnswer":{"@type":"Answer","text":"To talk, no. A key is made for you in the background. You touch the chain three times: setting up your inbox, creating a channel, and subscribing to a paid one — and the app shows the cost first."}},
+    {"@type":"Question","name":"What does Pombo cost?","acceptedAnswer":{"@type":"Answer","text":"Using it is free. Creating a channel costs a Polygon network fee paid to the network. Paid channels charge what their owner sets, and all of it reaches the owner."}},
+    {"@type":"Question","name":"Who can read my messages?","acceptedAnswer":{"@type":"Answer","text":"The people in the room. Direct messages and private channels are encrypted on your device before they go anywhere, and the keys stay there."}},
+    {"@type":"Question","name":"What happens if Pombo shuts down?","acceptedAnswer":{"@type":"Answer","text":"Channels are registered on-chain, and history lives on the storage cluster you chose — the default one, or a node you run. There is no Pombo server, and the protocol and clients are open."}},
+    {"@type":"Question","name":"Can I use it on my phone?","acceptedAnswer":{"@type":"Answer","text":"Two ways. It runs in any modern browser and installs to your home screen. There is also a native Android client on the same protocol, so both talk on the same channels. It is in beta and comes as an APK from GitHub."}}
   ]
 }
 </script>
@@ -2397,7 +2414,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       rule:'A subscription, at your price.',
       conseq:'It goes wallet to wallet, straight to the owner. Pombo takes none of it.' }
   ];
-  var DWELL = 11000, MAX_IN = 13;
+  var DWELL = 11000;
+  var MAX_IN = 13, SEP = 62, R_PERSON = 13, R_BOT = 6, BURST = 13, EVERY = 620, QCAP = 26;
   var COIN = '#FFC85C';   // must never match a lock colour
   gate.style.setProperty('--gt-dwell', DWELL + 'ms');
 
@@ -2409,6 +2427,17 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       + encodeURIComponent(new XMLSerializer().serializeToString(svg));
     faces.push(img);
   });
+
+  // Faces are lent from a pool and returned when their owner leaves, so the
+  // same person can never be on screen twice.
+  var freeFaces = faces.map(function(_, i){ return i; });
+  function takeFace(){
+    if (!freeFaces.length) return -1;
+    return freeFaces.splice((Math.random() * freeFaces.length) | 0, 1)[0];
+  }
+  function giveBack(p){
+    if (p && !p.bot && p.face >= 0 && freeFaces.indexOf(p.face) < 0) freeFaces.push(p.face);
+  }
 
   var lock = 0, W = 0, H = 0, line = 0, dpr = 1;
   var FIELD = 0, FX = 0;   // bounds the crowd only; the door spans the full width
@@ -2423,24 +2452,36 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     var hgt = cv.clientHeight || 340;
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = w; H = hgt;
-    FIELD = Math.min(W, 1000);
-    FX = (W - FIELD) / 2;
-    ownerSeat();
     cv.width = Math.round(w * dpr);
     cv.height = Math.round(hgt * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     line = Math.round(H * 0.74);
+    FIELD = Math.min(W, 1000);
+    FX = (W - FIELD) / 2;
+
+    // seat the crowd for the room we actually have, not for a desktop
+    var area = FIELD * Math.max(1, line - 60);
+    var clamp = function(v, lo, hi){ return Math.max(lo, Math.min(hi, v)); };
+    MAX_IN   = Math.round(clamp(area / 11000, 3, Math.max(3, faces.length - 1)));
+    SEP      = Math.round(clamp(Math.sqrt(area / MAX_IN) * 0.62, 40, 66));
+    R_PERSON = Math.round(clamp(FIELD / 34, 9, 13));
+    R_BOT    = Math.round(clamp(R_PERSON * 0.46, 4, 6));
+    BURST    = Math.round(clamp(MAX_IN * 0.9, 4, 14));
+    EVERY    = Math.round(clamp(9000 / MAX_IN, 620, 1300));
+    QCAP     = Math.round(clamp(MAX_IN * 2, 8, 26));
+
+    ownerSeat();
   }
 
   function comer(isBot, x){
     var L = LOCKS[lock];
     return {
       bot: isBot,
-      face: (Math.random() * faces.length) | 0,
+      face: isBot ? -1 : takeFace(),
       x: x == null ? FX + 30 + Math.random() * Math.max(1, FIELD - 60) : x,
       y: H + 14 + Math.random() * 46,
       vy: (isBot ? 0.85 : 0.6) + Math.random() * 0.4,
-      r: isBot ? 6 : 13,
+      r: isBot ? R_BOT : R_PERSON,
       cred: isBot ? null : (L.cred && Math.random() < L.pass ? L.cred : null),
       a: 0, state: 'up'
     };
@@ -2462,19 +2503,21 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       relink();
       return;
     }
+      // try a number of spots and keep the emptiest, rather than the last one
     var bw = Math.max(1, FIELD - 80), bh = Math.max(1, line - 80);
-    p.tx = FX + 40 + Math.random() * bw;
-    p.ty = 26 + Math.random() * bh;
-    for (var t = 0; t < 12; t++) {
-      var clash = false;
+    var bestX = 0, bestY = 0, bestGap = -1;
+    for (var t = 0; t < 26; t++) {
+      var cx = FX + 40 + Math.random() * bw, cy = 26 + Math.random() * bh;
+      var gap = 1e9;
       for (var m = 0; m < room.length; m++) {
-        var near = room[m].owner ? 96 : 62;
-        if (Math.hypot(p.tx - room[m].tx, p.ty - room[m].ty) < near) { clash = true; break; }
+        if (room[m].state === 'out') continue;
+        var want = room[m].owner ? SEP * 1.5 : SEP;
+        gap = Math.min(gap, Math.hypot(cx - room[m].tx, cy - room[m].ty) - want);
       }
-      if (!clash) break;
-      p.tx = FX + 40 + Math.random() * bw;
-      p.ty = 26 + Math.random() * bh;
+      if (gap > bestGap) { bestGap = gap; bestX = cx; bestY = cy; }
+      if (gap >= 0) break;
     }
+    p.tx = bestX; p.ty = bestY;
     p.ph = Math.random() * 6.28;
     p.life = 0;
     room.push(p);
@@ -2485,10 +2528,12 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
 
   var lastPerson = 0, lastBurst = 0, lastLink = 0, lastPulse = 0;
   function spawn(t){
-    if (t - lastPerson > 620 && queue.length < 26) { queue.push(comer(false)); lastPerson = t; }
-    if (t - lastBurst > 3400 && queue.length < 40) {
+    if (t - lastPerson > EVERY && queue.length < QCAP && freeFaces.length) {
+      queue.push(comer(false)); lastPerson = t;
+    }
+    if (t - lastBurst > 3400 && queue.length < QCAP + 12) {
       var cx = FX + 70 + Math.random() * Math.max(1, FIELD - 140);
-      var n = 10 + ((Math.random() * 7) | 0);
+      var n = Math.max(3, BURST - 3) + ((Math.random() * 5) | 0);
       for (var i = 0; i < n; i++) queue.push(comer(true, cx + (Math.random() - 0.5) * 130));
       lastBurst = t;
     }
@@ -2572,7 +2617,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
         p.y -= p.vy;
         p.vy = Math.max(p.vy - 0.07, -1.9);
         p.a -= 0.045;
-        if (p.a <= 0) queue.splice(i, 1);
+        if (p.a <= 0) { giveBack(p); queue.splice(i, 1); }
       }
     }
 
@@ -2581,14 +2626,43 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       q.life++;
       if (q.state === 'out') {
         q.a -= 0.02;
-        if (q.a <= 0) { room.splice(m, 1); relink(); }
+        if (q.a <= 0) { giveBack(q); room.splice(m, 1); relink(); }
         continue;
+      }
+      // nudge anyone who ended up too close, every frame
+      for (var o = 0; o < room.length; o++) {
+        if (o === m || room[o].state === 'out') continue;
+        var ox = q.tx - room[o].tx, oy = q.ty - room[o].ty;
+        var d = Math.hypot(ox, oy) || 0.01;
+        var want2 = (q.owner || room[o].owner) ? SEP * 1.5 : SEP;
+        if (d < want2) {
+          var push = (want2 - d) * 0.06 / d;
+          q.tx += ox * push; q.ty += oy * push;
+          q.tx = Math.max(FX + 26, Math.min(FX + FIELD - 26, q.tx));
+          q.ty = Math.max(24, Math.min(line - 40, q.ty));
+        }
       }
       q.x += (q.tx - q.x) * 0.045;
       q.y += (q.ty - q.y) * 0.045;
       q.y += Math.sin((t / 1000) + q.ph) * 0.16;
       if (q.life > 900 && !q.owner) q.state = 'out';
     }
+
+    // targets alone are not enough: someone crossing the room to reach a free
+    // spot can pass straight through the crowd, so resolve real positions too
+    var live2 = room.filter(function(p){ return p.state !== 'out'; });
+    for (var pass = 0; pass < 2; pass++)
+      for (var i2 = 0; i2 < live2.length; i2++)
+        for (var j2 = i2 + 1; j2 < live2.length; j2++) {
+          var A = live2[i2], B = live2[j2];
+          var dx2 = B.x - A.x, dy2 = B.y - A.y;
+          var d2 = Math.hypot(dx2, dy2) || 0.01;
+          var min2 = A.r + B.r + 8;
+          if (d2 >= min2) continue;
+          var k2 = (min2 - d2) / 2 / d2;
+          if (!A.owner) { A.x -= dx2 * k2; A.y -= dy2 * k2; }
+          if (!B.owner) { B.x += dx2 * k2; B.y += dy2 * k2; }
+        }
 
     if (t - lastLink > 600) { relink(); lastLink = t; }
 
