@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pombo — Own Your Communications</title>
-<meta name="description" content="A social app where your communities, your messages, and what you earn from them belong to you. Encrypted, decentralized, no sign-up.">
+<title>Pombo - Own Your Communications</title>
+<meta name="description" content="A social app where your messages, your communities, and what you earn from them belong to you. Encrypted, decentralized, no sign-up.">
 <link rel="canonical" href="https://pombo.cc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Pombo — Own Your Communications">
+<meta property="og:title" content="Pombo - Own Your Communications">
 <meta property="og:description" content="Your people. Your rules. Your money. Communities, direct messages and paid channels that belong to you.">
 <meta property="og:url" content="https://pombo.cc/">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
 <meta property="og:site_name" content="Pombo">
-<meta name="twitter:title" content="Pombo — Own Your Communications">
+<meta name="twitter:title" content="Pombo - Own Your Communications">
 <meta name="twitter:description" content="Your people. Your rules. Your money. Communities, direct messages and paid channels that belong to you.">
 <meta name="twitter:image" content="https://pombo.cc/favicon/og-banner.png">
 <meta name="twitter:site" content="@app_Pombo">
@@ -68,6 +68,7 @@ section{padding:clamp(4.5rem,9vw,7.5rem) 0;position:relative}
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.95rem 1.7rem;border-radius:999px;font-weight:600;font-size:1rem;transition:transform .2s,background .2s,border-color .2s,color .2s}
 .btn svg{width:20px;height:20px;flex:none}
+.hero-actions .btn-primary svg{width:28px;height:28px}
 .btn-primary{background:var(--accent);color:#000}
 .btn-primary:hover{background:#ff9530;transform:translateY(-2px)}
 .btn-ghost{border:1px solid var(--border-l);color:var(--text-1)}
@@ -84,7 +85,7 @@ section{padding:clamp(4.5rem,9vw,7.5rem) 0;position:relative}
 .hero-triad{font-size:clamp(1.1rem,2.3vw,1.5rem);font-weight:500;letter-spacing:-0.02em;color:var(--text-1);margin-top:0.7rem;line-height:1.3}
 .hero-triad span{color:var(--accent)}
 
-.gate{position:relative;z-index:2;width:100vw;margin-left:calc(50% - 50vw);margin-top:0.75rem;--gt:var(--accent)}
+.gate{position:relative;z-index:2;width:100%;margin-top:0.75rem;--gt:var(--accent)}
 .gt-canvas{display:block;width:100%;height:284px}
 .gt-src[hidden]{display:none}
 .gt-legend{text-align:center;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.35rem}
@@ -94,7 +95,8 @@ section{padding:clamp(4.5rem,9vw,7.5rem) 0;position:relative}
 .gt-rule,.gt-conseq{animation:gtIn .45s cubic-bezier(0.16,1,0.3,1)}
 @keyframes gtIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
 
-.gt-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem;margin-top:0.8rem;padding:0 1.5rem}
+.gt-pick{text-align:center;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-top:0.9rem}
+.gt-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem;margin-top:0.5rem;padding:0 1.5rem}
 .gt-chip{position:relative;overflow:hidden;background:transparent;border:1px solid var(--border);border-radius:999px;padding:0.45rem 1rem;color:var(--text-3);font-family:inherit;font-size:0.78rem;font-weight:600;letter-spacing:0.03em;cursor:pointer;transition:color .25s,border-color .25s,background .25s}
 .gt-chip:hover{color:var(--text-1);border-color:var(--border-l)}
 .gt-chip[aria-pressed="true"]{color:var(--gt);border-color:var(--gt);background:color-mix(in srgb,var(--gt) 10%,transparent)}
@@ -105,7 +107,11 @@ section{padding:clamp(4.5rem,9vw,7.5rem) 0;position:relative}
 
 .hero-bottom{position:relative;z-index:2;margin-top:1.35rem}
 .hero-actions{display:flex;flex-wrap:wrap;gap:0.85rem;justify-content:center}
-.hero-actions .btn{padding:0.8rem 1.5rem;font-size:0.95rem}
+.hero-actions .btn{padding:0.9375rem 2.25rem;gap:0.5rem;font-size:0.9375rem}
+.hero-actions .btn-primary{box-shadow:0 6px 32px rgba(246,133,27,0.3)}
+.hero-actions .btn-primary:hover{box-shadow:0 8px 40px rgba(246,133,27,0.4)}
+.hero-actions .btn-ghost{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.14)}
+.hero-actions .btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.10)}
 .hero-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:0.8rem 1.8rem;margin-top:1.4rem;padding-top:0;border-top:0;font-size:0.82rem;color:var(--text-3);list-style:none}
 .hero-trust li{display:flex;align-items:center;gap:0.5rem}
 .hero-trust svg{width:15px;height:15px;color:var(--accent);flex:none}
@@ -119,7 +125,7 @@ section{padding:clamp(4.5rem,9vw,7.5rem) 0;position:relative}
 }
 @media (max-height:680px) and (min-width:761px){
   .gt-canvas{height:200px}
-  .gt-legend{display:none}
+  .gt-legend,.gt-pick{display:none}
 }
 @media (max-width:760px){
   .gt-conseq{min-height:4.5em}
@@ -285,7 +291,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
   .item h3{font-size:1.1rem}
   section{padding:3rem 0}
   .sec-head{margin-bottom:2rem}
-  .hero-actions .btn{padding:0.75rem 1.25rem;font-size:0.9rem}
+  .hero-actions .btn{padding:0.85rem 1.5rem;font-size:0.9rem}
   .container{padding:0 1.15rem}
   .earn-figure{padding:1.5rem 0.85rem}
   .earn-flow{gap:0.4rem}
@@ -892,6 +898,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
             animation: panelIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
         }
 .hood-panel[hidden]{display:none}
+.hood-top{display:none;margin:2.75rem auto 0;align-items:center;gap:0.45rem;padding:0.85rem 1.25rem;border-radius:999px;background:transparent;border:1px solid var(--border);color:var(--text-3);font-family:inherit;font-size:0.78rem;font-weight:600;letter-spacing:0.03em;cursor:pointer;transition:color .2s,border-color .2s}
+.hood-top svg{width:0.95rem;height:0.95rem;display:block}
+.hood-top:hover,.hood-top:active{color:var(--text-1);border-color:var(--border-l)}
+@media (max-width:767px){.hood-top{display:flex}}
 /* Hood panel layouts */
         .hood-two-col {
             display: grid;
@@ -1097,7 +1107,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
   "url": "https://pombo.cc",
   "applicationCategory": "CommunicationApplication",
   "operatingSystem": "Web, Android",
-  "description": "Decentralized encrypted social app: communities, private direct messages, and channels you can charge for — with no sign-up, no phone number, and no central servers.",
+  "description": "Decentralized encrypted social app: communities, private direct messages, and channels you can charge for, with no sign-up, no phone number, and no central servers.",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -1108,7 +1118,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     "Public, password-protected, closed, token-gated and paid channels",
     "Paid channels where the subscription goes straight to the owner",
     "Decentralized delivery on the Streamr Network",
-    "No sign-up — a key generated locally on your device",
+    "No sign-up, just a key generated locally on your device",
     "Private direct messages to any Ethereum address",
     "Privacy-preserving push notifications",
     "Full data ownership, backup, and export"
@@ -1120,7 +1130,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     "url": "https://pombo.cc",
     "logo": "https://pombo.cc/favicon/web-app-manifest-512x512.png",
     "sameAs": [
-      "https://github.com/Ocnrb/Pombo",
+      "https://github.com/Pombo-app/Pombo",
       "https://x.com/app_Pombo"
     ]
   }
@@ -1157,22 +1167,23 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     <h1>Own your communications.</h1>
     <p class="hero-triad">Your people. Your rules. <span>Your money.</span></p>
     <p class="hero-sub">
-      A social app where your communities, your messages, and what you earn
+      A social app where your messages, your communities, and what you earn
       from them belong to you.
     </p>
   </div>
 
   <div class="gate" id="gate">
   <div class="gt-src" hidden aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-o6yk33"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-o6yk33)"><rect width="40" height="40" fill="#122a24"/><g transform="rotate(55 20 20)"><path d="M14.68,1.02 C15.53,-0.05 19.78,-1.78 20.87,-1.25 C21.96,-0.71 24.36,5.05 25.12,6.19 C25.88,7.33 27.00,9.36 28.17,9.66 C29.35,9.97 35.13,8.60 36.41,9.07 C37.69,9.55 40.65,13.06 40.47,14.26 C40.30,15.46 35.56,19.53 34.72,20.60 C33.87,21.68 32.28,23.37 32.36,24.58 C32.43,25.79 35.52,30.86 35.46,32.23 C35.40,33.59 32.98,37.49 31.79,37.70 C30.59,37.90 25.26,34.65 23.98,34.18 C22.69,33.71 20.59,32.72 19.46,33.17 C18.33,33.61 14.47,38.12 13.15,38.48 C11.83,38.85 7.37,37.75 6.81,36.68 C6.25,35.60 7.69,29.53 7.74,28.16 C7.79,26.80 8.09,24.49 7.31,23.56 C6.54,22.62 1.06,20.34 0.31,19.20 C-0.45,18.05 -0.79,13.48 0.06,12.61 C0.91,11.74 7.13,11.24 8.45,10.86 C9.76,10.49 12.05,10.06 12.70,9.03 C13.35,8.01 13.83,2.09 14.68,1.02 M15.75,20.80 C15.51,20.55 14.97,20.19 14.71,20.05 C14.45,19.92 13.48,19.69 13.25,19.49 C13.02,19.29 12.56,18.42 12.49,18.11 C12.41,17.81 12.45,16.83 12.54,16.53 C12.62,16.23 13.12,15.41 13.35,15.21 C13.57,15.00 14.47,14.75 14.71,14.59 C14.95,14.42 15.42,13.89 15.65,13.63 C15.89,13.37 16.67,12.18 16.99,12.08 C17.30,11.99 18.44,12.43 18.65,12.73 C18.86,13.03 18.84,14.64 18.97,14.94 C19.10,15.24 19.58,15.45 19.93,15.60 C20.28,15.74 22.12,16.07 22.35,16.33 C22.58,16.60 22.41,17.92 22.14,18.18 C21.86,18.45 20.04,18.69 19.73,18.86 C19.41,19.02 19.21,19.45 19.11,19.78 C19.01,20.12 18.98,21.81 18.77,22.08 C18.55,22.35 17.34,22.54 17.03,22.40 C16.71,22.27 15.99,21.04 15.75,20.80" fill="#49bcac"/></g><path d="M12.455386411327822 14.972014748637838 Q15.30940101178363 11.950472374107562 18.163415612239437 15.193849130852806" fill="none" stroke="#122a24" stroke-width="1.4893657592743634" stroke-linecap="round" opacity="1"/><path d="M22.48402369032259 14.657809989369149 Q25.17129265541211 12.374912813300615 27.85856162050163 14.766896513541553" fill="none" stroke="#122a24" stroke-width="1.5262245386302469" stroke-linecap="round" opacity="1"/><line x1="14.429198484644292" y1="23.286363412532953" x2="24.479171864166855" y2="23.425273388810457" stroke="#122a24" stroke-width="1.68" stroke-linecap="round" opacity="1"/><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#122a24" fill-rule="evenodd"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-o6yk34"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-o6yk34)"><rect width="40" height="40" fill="#183113"/><g transform="rotate(141 20 20)"><path d="M1.49,11.82 C0.87,10.29 1.18,4.75 2.23,4.09 C3.29,3.44 9.99,5.01 11.61,5.56 C13.22,6.10 16.67,9.46 17.71,9.37 C18.75,9.27 20.41,5.65 21.57,4.67 C22.73,3.70 27.58,0.00 28.83,0.02 C30.08,0.04 33.10,3.59 33.54,4.88 C33.98,6.17 33.00,11.15 33.06,12.41 C33.12,13.67 33.70,15.99 34.10,16.96 C34.51,17.93 36.65,20.64 36.92,21.73 C37.20,22.82 37.04,26.27 36.73,27.39 C36.42,28.51 34.69,31.56 33.92,32.47 C33.16,33.38 30.47,35.79 29.37,36.13 C28.27,36.46 24.50,35.96 23.38,35.67 C22.26,35.39 19.68,33.44 18.63,33.39 C17.58,33.35 14.66,34.93 13.26,35.26 C11.85,35.59 6.29,37.10 5.16,36.57 C4.04,36.04 2.21,31.63 2.49,30.18 C2.76,28.73 7.20,23.82 7.80,22.63 C8.39,21.44 8.86,19.92 8.20,18.79 C7.55,17.67 2.11,13.35 1.49,11.82 M24.46,24.00 C24.19,24.20 23.93,24.60 23.87,24.91 C23.80,25.23 23.99,26.75 23.82,27.02 C23.65,27.29 22.59,27.43 22.25,27.49 C21.92,27.55 20.94,27.63 20.60,27.58 C20.26,27.54 19.15,27.36 18.99,27.08 C18.83,26.79 19.11,25.19 19.07,24.86 C19.02,24.52 18.81,24.10 18.57,23.89 C18.33,23.67 16.92,23.07 16.77,22.79 C16.62,22.51 17.02,21.52 17.14,21.20 C17.26,20.88 17.68,20.00 17.89,19.72 C18.09,19.45 18.80,18.58 19.13,18.58 C19.46,18.59 20.71,19.63 21.02,19.76 C21.33,19.88 21.80,19.91 22.10,19.81 C22.41,19.71 23.64,18.79 23.95,18.80 C24.27,18.81 24.93,19.66 25.15,19.92 C25.37,20.18 25.92,20.98 26.05,21.30 C26.18,21.62 26.58,22.67 26.42,22.95 C26.25,23.23 24.72,23.79 24.46,24.00" fill="#b6cf71"/></g><circle cx="15.388359250972048" cy="15.2633089280501" r="2.1384018672555687" fill="#183113" opacity="1"/><circle cx="25.079414448229596" cy="14.582898999303579" r="2.396592510536313" fill="#183113" opacity="1"/><line x1="14.651631269186733" y1="23.392746824151835" x2="25.795507769703864" y2="23.746802220926618" stroke="#183113" stroke-width="1.68" stroke-linecap="round" opacity="1"/><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#183113" fill-rule="evenodd"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-o6yk35"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-o6yk35)"><rect width="40" height="40" fill="#1c240f"/><g transform="rotate(257 20 20)"><path d="M32.65,18.25 C33.07,19.21 36.49,21.92 36.89,23.02 C37.28,24.12 37.20,28.05 36.48,28.81 C35.75,29.57 31.05,30.03 29.92,30.31 C28.78,30.59 26.36,30.80 25.58,31.49 C24.79,32.19 23.27,36.27 22.35,36.99 C21.43,37.71 17.66,38.85 16.72,38.39 C15.77,37.94 13.87,33.61 13.26,32.62 C12.64,31.62 11.70,29.39 10.79,28.85 C9.89,28.32 5.54,28.14 4.57,27.49 C3.60,26.83 1.35,23.60 1.49,22.56 C1.63,21.52 5.16,18.38 5.92,17.48 C6.67,16.59 8.50,15.00 8.73,13.98 C8.96,12.95 7.79,8.76 8.11,7.64 C8.44,6.51 10.81,3.38 11.85,3.19 C12.88,3.00 16.96,5.39 18.04,5.83 C19.12,6.27 21.20,7.52 22.25,7.42 C23.29,7.32 26.92,4.91 28.09,4.87 C29.25,4.83 32.97,6.12 33.47,7.05 C33.97,7.97 32.96,12.59 32.87,13.76 C32.79,14.92 32.24,17.29 32.65,18.25 M21.10,20.06 C21.38,19.90 22.40,19.72 22.70,19.79 C23.00,19.86 23.66,20.54 23.97,20.73 C24.27,20.93 25.50,21.38 25.61,21.67 C25.72,21.96 25.26,23.25 25.03,23.56 C24.81,23.87 23.58,24.38 23.47,24.66 C23.37,24.93 24.00,25.86 24.00,26.18 C24.00,26.49 23.65,27.47 23.44,27.70 C23.23,27.92 22.31,28.15 21.98,28.32 C21.66,28.48 20.66,29.32 20.35,29.27 C20.04,29.22 19.17,28.18 19.01,27.83 C18.85,27.48 19.02,26.16 18.83,25.93 C18.65,25.70 17.53,25.79 17.26,25.63 C16.98,25.47 16.31,24.68 16.22,24.38 C16.13,24.09 16.39,23.17 16.41,22.81 C16.43,22.45 16.20,21.16 16.40,20.92 C16.59,20.68 17.94,20.44 18.32,20.47 C18.70,20.51 19.76,21.32 20.05,21.28 C20.34,21.23 20.83,20.22 21.10,20.06" fill="#c69a48"/></g><line x1="13.43954428651013" y1="15.374566243111216" x2="18.374950778176853" y2="15.501334777300181" stroke="#1c240f" stroke-width="2.0146397045731543" stroke-linecap="round" opacity="1"/><line x1="23.224430424476573" y1="14.583066268082753" x2="28.034836963066304" y2="14.652528199270321" stroke="#1c240f" stroke-width="1.8680357295870782" stroke-linecap="round" opacity="1"/><path d="M15.17873941678554 23.420090661793946 Q20.65525868088007 30.65438032506965 26.1317779449746 23.41183220377192" fill="none" stroke="#1c240f" stroke-width="1.68" stroke-linecap="round" opacity="1"/><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#1c240f" fill-rule="evenodd"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-o6yk37"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-o6yk37)"><rect width="40" height="40" fill="#152530"/><g transform="rotate(54 20 20)"><path d="M30.24,24.40 C29.16,24.85 26.96,25.00 26.68,25.86 C26.40,26.73 27.81,31.37 27.56,32.72 C27.31,34.08 25.19,38.64 24.26,38.86 C23.33,39.08 19.44,35.91 18.63,34.81 C17.82,33.70 17.08,28.90 16.46,28.23 C15.84,27.55 13.82,28.31 12.67,28.35 C11.51,28.40 6.37,29.16 5.39,28.68 C4.42,28.20 3.11,24.79 3.32,23.77 C3.52,22.74 6.71,19.69 7.37,18.83 C8.04,17.98 9.45,16.37 9.73,15.58 C10.00,14.79 9.72,12.08 10.00,11.22 C10.28,10.36 11.76,7.91 12.46,7.31 C13.16,6.71 15.79,5.68 16.72,5.45 C17.64,5.23 20.48,4.92 21.37,5.15 C22.26,5.39 24.67,7.04 25.28,7.72 C25.90,8.39 26.73,11.07 27.31,11.68 C27.88,12.29 29.83,13.10 30.81,13.58 C31.79,14.05 36.08,15.39 36.73,16.22 C37.37,17.06 37.70,20.72 37.03,21.57 C36.35,22.42 31.31,23.96 30.24,24.40 M24.89,24.94 C24.57,25.18 22.96,25.23 22.77,25.49 C22.58,25.75 23.13,27.01 23.06,27.41 C23.00,27.82 22.43,29.31 22.14,29.34 C21.85,29.36 20.57,27.92 20.27,27.66 C19.96,27.40 19.59,26.83 19.24,26.86 C18.89,26.89 17.24,27.97 16.90,27.93 C16.55,27.88 15.86,26.79 15.91,26.43 C15.97,26.07 17.37,24.78 17.45,24.45 C17.52,24.12 16.79,23.60 16.59,23.25 C16.40,22.89 15.42,21.32 15.55,21.06 C15.68,20.80 17.39,20.76 17.80,20.78 C18.21,20.81 19.18,21.47 19.46,21.31 C19.74,21.14 20.19,19.44 20.49,19.20 C20.79,18.96 22.14,18.74 22.35,18.98 C22.56,19.23 22.41,21.24 22.51,21.59 C22.62,21.95 23.01,22.23 23.36,22.39 C23.70,22.56 25.66,22.94 25.82,23.20 C25.98,23.47 25.21,24.70 24.89,24.94" fill="#52cc77"/></g><circle cx="14.300461163155735" cy="14.33771514815744" r="2.1491143744289873" fill="#152530" opacity="1"/><circle cx="14.300461163155735" cy="14.33771514815744" r="0.83389740818829" fill="#1a1a24" opacity="1"/><circle cx="24.571374522179365" cy="15.041613611602223" r="2.404614988312125" fill="#152530" opacity="1"/><circle cx="24.571374522179365" cy="15.041613611602223" r="0.9214459331039198" fill="#1a1a24" opacity="1"/><path d="M15.809340887768196 22.51554316648282 Q19.38409128263593 24.930283518223092 22.958841677503663 22.280464090527964" fill="none" stroke="#152530" stroke-width="1.44" stroke-linecap="round" opacity="1"/><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#152530" fill-rule="evenodd"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-o6yk3b"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-o6yk3b)"><rect width="40" height="40" fill="#163536"/><g transform="rotate(19 20 20)"><path d="M32.39,7.50 C32.92,8.55 33.22,11.95 33.66,12.97 C34.10,13.99 36.08,16.26 36.63,17.29 C37.17,18.33 38.95,21.80 38.86,22.90 C38.76,24.01 36.54,27.10 35.71,27.92 C34.88,28.75 31.74,30.08 30.91,30.82 C30.07,31.55 28.53,34.14 27.71,34.98 C26.89,35.81 24.15,38.58 23.07,38.83 C21.98,39.08 18.36,37.92 17.32,37.39 C16.28,36.86 14.04,34.28 13.09,33.72 C12.13,33.15 9.19,32.48 8.14,31.96 C7.09,31.44 3.61,29.69 3.04,28.73 C2.46,27.78 2.45,23.98 2.63,22.83 C2.82,21.67 4.58,18.75 4.82,17.66 C5.06,16.58 4.79,13.57 4.96,12.42 C5.13,11.26 5.72,7.41 6.45,6.57 C7.18,5.73 10.79,4.54 11.94,4.36 C13.10,4.18 16.43,4.94 17.53,4.84 C18.64,4.73 21.41,3.55 22.56,3.35 C23.72,3.16 27.57,2.53 28.59,2.96 C29.61,3.40 31.86,6.46 32.39,7.50 M15.29,24.46 C14.97,24.34 14.14,23.84 13.87,23.62 C13.61,23.41 12.75,22.74 12.74,22.42 C12.73,22.10 13.68,20.86 13.78,20.55 C13.88,20.24 13.85,19.77 13.73,19.46 C13.60,19.16 12.58,17.92 12.58,17.60 C12.57,17.28 13.44,16.57 13.70,16.36 C13.97,16.14 14.82,15.67 15.14,15.55 C15.45,15.42 16.46,15.01 16.74,15.16 C17.03,15.32 17.63,16.76 17.85,17.00 C18.06,17.25 18.48,17.46 18.81,17.50 C19.14,17.55 20.72,17.28 21.00,17.44 C21.28,17.60 21.46,18.69 21.51,19.03 C21.57,19.37 21.55,20.34 21.50,20.68 C21.45,21.02 21.30,22.09 21.03,22.26 C20.75,22.43 19.20,22.23 18.88,22.30 C18.57,22.36 18.17,22.62 17.97,22.89 C17.77,23.15 17.21,24.65 16.93,24.82 C16.65,24.98 15.61,24.58 15.29,24.46" fill="#5a7ecb"/></g><path d="M12.248862196220776 15.546705904662387 Q14.30580410622619 13.971351610957148 16.362746016231604 15.454628637513364" fill="none" stroke="#163536" stroke-width="1.2746382784634827" stroke-linecap="round" opacity="1"/><path d="M22.603481384965068 14.657335852391194 Q25.193278781319037 12.940790377139997 27.783076177673006 14.770286071601214" fill="none" stroke="#163536" stroke-width="1.3752193360447882" stroke-linecap="round" opacity="1"/><path d="M14.419878008030354 22.362644558512606 Q20.31807536780834 27.571783864004537 26.21627272758633 22.355385267923587" fill="none" stroke="#163536" stroke-width="1.56" stroke-linecap="round" opacity="1"/><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#163536" fill-rule="evenodd"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-o6yk3c"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-o6yk3c)"><rect width="40" height="40" fill="#22112b"/><g transform="rotate(4 20 20)"><path d="M3.46,13.62 C2.79,12.31 2.88,7.32 3.93,6.93 C4.97,6.55 12.09,9.68 13.46,9.89 C14.83,10.10 16.28,9.92 17.07,8.97 C17.86,8.02 20.06,1.38 21.04,0.78 C22.02,0.18 25.80,2.16 26.49,3.17 C27.19,4.19 27.13,9.59 27.68,10.55 C28.23,11.51 30.80,11.88 31.76,12.39 C32.73,12.91 36.43,14.61 36.92,15.50 C37.42,16.38 36.81,19.87 36.49,20.89 C36.18,21.92 34.46,24.53 33.86,25.35 C33.26,26.17 31.37,28.00 30.77,28.75 C30.17,29.50 28.73,31.60 28.10,32.53 C27.47,33.45 25.63,37.24 24.69,37.64 C23.76,38.04 20.02,37.10 19.11,36.35 C18.20,35.60 16.86,30.93 15.97,30.45 C15.07,29.96 11.91,31.59 10.51,31.68 C9.10,31.77 2.98,32.15 2.49,31.32 C2.01,30.50 5.04,25.00 5.85,23.76 C6.67,22.53 10.58,20.53 10.34,19.48 C10.09,18.42 4.13,14.92 3.46,13.62 M16.13,13.61 C16.50,13.57 16.91,12.95 17.15,12.83 C17.40,12.71 18.17,12.57 18.48,12.50 C18.80,12.43 19.83,12.13 20.18,12.17 C20.53,12.21 21.76,12.55 21.82,12.88 C21.88,13.21 20.73,14.96 20.73,15.31 C20.73,15.66 21.66,15.98 21.86,16.24 C22.06,16.51 22.68,17.54 22.67,17.85 C22.66,18.16 21.98,18.98 21.76,19.24 C21.55,19.50 20.91,20.34 20.59,20.34 C20.27,20.34 19.02,19.22 18.70,19.25 C18.38,19.29 17.88,20.44 17.56,20.66 C17.24,20.88 15.88,21.47 15.62,21.33 C15.36,21.19 15.19,19.65 15.05,19.31 C14.92,18.97 14.34,18.37 14.32,18.10 C14.29,17.83 14.86,16.99 14.79,16.68 C14.71,16.38 13.73,15.54 13.60,15.17 C13.47,14.81 13.30,13.34 13.57,13.18 C13.83,13.02 15.76,13.65 16.13,13.61" fill="#6254c3"/></g><line x1="13.552344434795403" y1="14.539198929995642" x2="17.43441983514143" y2="14.692336503460659" stroke="#22112b" stroke-width="1.7096165874123572" stroke-linecap="round" opacity="1"/><line x1="24.378697480376015" y1="14.8353181921242" x2="28.430406225488387" y2="14.713114681586786" stroke="#22112b" stroke-width="1.7039386944651604" stroke-linecap="round" opacity="1"/><line x1="14.133900167681276" y1="23.122860041139646" x2="24.571806743107736" y2="23.464721440738067" stroke="#22112b" stroke-width="1.68" stroke-linecap="round" opacity="1"/><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#22112b" fill-rule="evenodd"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-vchb0f"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-vchb0f)"><rect width="40" height="40" fill="#322013"/><g transform="rotate(266 20 20)"><path d="M40.69,19.45 C40.56,20.55 36.74,23.92 35.46,24.58 C34.19,25.24 29.02,24.93 28.45,25.80 C27.87,26.67 30.00,31.28 29.92,32.92 C29.83,34.56 28.63,41.07 27.64,41.57 C26.66,42.06 21.64,38.63 20.47,37.67 C19.29,36.72 17.29,32.89 16.34,32.36 C15.39,31.83 12.33,32.83 11.36,32.58 C10.38,32.34 7.82,30.69 6.98,30.00 C6.13,29.30 4.04,26.92 3.24,25.94 C2.44,24.95 -0.83,21.64 -0.69,20.55 C-0.56,19.45 3.26,16.08 4.54,15.42 C5.81,14.76 10.98,15.07 11.55,14.20 C12.13,13.33 10.00,8.72 10.08,7.08 C10.17,5.44 11.37,-1.07 12.36,-1.57 C13.34,-2.06 18.36,1.37 19.53,2.33 C20.71,3.28 22.71,7.11 23.66,7.64 C24.61,8.17 27.67,7.17 28.64,7.42 C29.62,7.66 32.18,9.31 33.02,10.00 C33.87,10.70 35.96,13.08 36.76,14.06 C37.56,15.05 40.83,18.36 40.69,19.45 M20.56,19.40 C20.84,19.52 21.36,20.34 21.55,20.62 C21.73,20.90 22.37,21.78 22.33,22.09 C22.30,22.39 21.48,23.31 21.24,23.55 C21.00,23.78 20.11,24.00 20.04,24.33 C19.97,24.66 20.66,26.33 20.57,26.70 C20.48,27.07 19.49,27.96 19.15,27.90 C18.82,27.84 17.68,26.32 17.37,26.12 C17.06,25.92 16.46,26.01 16.16,26.00 C15.86,26.00 14.75,26.17 14.47,26.05 C14.19,25.93 13.67,25.11 13.49,24.83 C13.30,24.55 12.66,23.67 12.70,23.36 C12.73,23.06 13.55,22.14 13.79,21.90 C14.03,21.67 14.92,21.45 14.99,21.12 C15.06,20.79 14.37,19.12 14.46,18.75 C14.55,18.38 15.55,17.49 15.88,17.55 C16.21,17.61 17.35,19.13 17.66,19.33 C17.97,19.53 18.57,19.44 18.87,19.45 C19.17,19.45 20.28,19.28 20.56,19.40" fill="#c15a5f"/></g><g transform="rotate(14.7 20 20)" opacity="1"><path d="M11.29410670199682 14.622224431556281 Q14.106560230515898 12.209545976610436 16.919013759034975 14.539232277202787" fill="none" stroke="#322013" stroke-width="1.5864583099275824" stroke-linecap="round" opacity="1"/><path d="M23.026333473362484 15.01870449283893 Q25.5318889605999 12.657668390240353 28.037444447837316 14.757823813689994" fill="none" stroke="#322013" stroke-width="1.5194887383520603" stroke-linecap="round" opacity="1"/><path d="M15.325962964259087 23.483641387427923 Q19.682125631719828 27.54183626545593 24.038288299180568 21.892431676642737" fill="none" stroke="#322013" stroke-width="1.44" stroke-linecap="round" opacity="1"/></g><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#322013" fill-rule="evenodd"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-vchb0d"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-vchb0d)"><rect width="40" height="40" fill="#18112f"/><g transform="rotate(168 20 20)"><path d="M8.75,25.08 C9.16,23.88 10.34,21.95 9.99,21.11 C9.63,20.26 5.65,17.85 5.36,16.97 C5.07,16.09 6.65,13.48 7.17,12.69 C7.69,11.89 9.48,9.71 10.31,9.36 C11.14,9.00 14.28,9.32 15.17,9.30 C16.05,9.28 17.92,9.82 18.80,9.12 C19.68,8.42 22.72,2.77 23.61,2.56 C24.50,2.35 27.08,5.88 27.34,7.12 C27.60,8.37 25.43,13.77 26.06,14.48 C26.69,15.19 32.26,13.57 33.38,13.95 C34.51,14.33 37.02,17.25 36.86,18.13 C36.69,19.02 32.48,21.62 31.83,22.45 C31.19,23.27 31.00,25.36 30.66,26.07 C30.31,26.79 28.96,28.53 28.51,29.35 C28.06,30.17 27.00,33.24 26.30,33.94 C25.59,34.63 22.62,36.50 21.77,35.99 C20.92,35.48 18.95,29.60 18.13,29.03 C17.32,28.47 15.21,30.23 13.95,30.61 C12.70,30.99 6.61,33.26 6.07,32.68 C5.53,32.11 8.34,26.29 8.75,25.08 M18.01,12.54 C18.21,12.30 19.72,12.46 20.11,12.52 C20.49,12.58 21.40,13.06 21.71,13.11 C22.01,13.17 22.83,12.95 23.05,13.07 C23.27,13.19 23.61,14.06 23.85,14.22 C24.09,14.38 24.98,14.46 25.36,14.61 C25.73,14.76 27.32,15.33 27.43,15.63 C27.54,15.92 26.64,17.15 26.40,17.46 C26.15,17.76 25.29,18.31 25.09,18.55 C24.88,18.78 24.66,19.59 24.45,19.73 C24.24,19.87 23.31,19.72 23.05,19.85 C22.79,19.98 22.28,20.71 21.96,20.96 C21.65,21.21 20.36,22.30 20.05,22.24 C19.74,22.19 19.12,20.80 18.98,20.44 C18.84,20.07 18.79,19.05 18.69,18.76 C18.59,18.46 17.99,17.87 17.98,17.61 C17.97,17.36 18.56,16.63 18.58,16.34 C18.60,16.05 18.22,15.24 18.16,14.85 C18.10,14.45 17.80,12.79 18.01,12.54" fill="#c46ab8"/></g><g transform="rotate(-7.7 20 20)" opacity="1"><circle cx="14.251272380011155" cy="15.613919474575667" r="2.573845568418503" fill="#18112f" opacity="1"/><circle cx="14.251272380011155" cy="15.613919474575667" r="0.8965986935931856" fill="#1a1a24" opacity="1"/><circle cx="25.447718630885706" cy="15.261850238572805" r="2.3402123209387065" fill="#18112f" opacity="1"/><circle cx="25.447718630885706" cy="15.261850238572805" r="0.9856359211851715" fill="#1a1a24" opacity="1"/><path d="M11.62374096216401 20.934919674668453 L11.62374096216401 26.446129556650625 Q19.437396505475043 30.41448619965254 27.251052048786075 26.165846099182662 L27.251052048786075 22.146396631847114 Z" fill="#18112f" opacity="0.9"/></g><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#18112f" fill-rule="evenodd"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-vchaxs"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-vchaxs)"><rect width="40" height="40" fill="#122826"/><g transform="rotate(276 20 20)"><path d="M5.75,27.87 C6.00,26.47 7.94,23.45 7.55,22.40 C7.16,21.35 2.76,18.97 2.00,17.76 C1.25,16.55 -0.32,11.71 0.31,10.78 C0.95,9.86 6.70,9.07 8.11,8.88 C9.52,8.68 12.99,9.60 13.87,8.90 C14.75,8.20 15.65,3.28 16.57,2.19 C17.49,1.10 21.61,-1.89 22.68,-1.57 C23.76,-1.25 26.28,3.97 26.91,5.26 C27.53,6.54 27.73,10.12 28.66,10.74 C29.60,11.36 34.55,10.70 35.88,11.23 C37.20,11.77 41.32,14.77 41.35,15.89 C41.37,17.01 37.18,21.02 36.16,22.01 C35.13,23.00 31.79,24.30 31.48,25.38 C31.18,26.46 33.34,30.97 33.24,32.39 C33.14,33.81 31.57,38.65 30.51,39.03 C29.45,39.40 24.34,36.66 23.08,35.99 C21.82,35.32 19.56,32.54 18.43,32.58 C17.31,32.63 13.69,36.08 12.31,36.42 C10.92,36.77 5.83,36.76 5.15,35.87 C4.47,34.98 5.50,29.27 5.75,27.87 M24.31,12.10 C24.68,12.29 26.03,12.89 26.16,13.24 C26.29,13.59 25.75,15.05 25.59,15.44 C25.44,15.83 24.65,16.56 24.70,16.99 C24.75,17.43 26.10,19.20 26.05,19.61 C26.00,20.02 24.69,20.92 24.23,20.90 C23.77,20.88 22.02,19.31 21.61,19.39 C21.20,19.48 20.66,21.39 20.26,21.71 C19.87,22.03 18.05,22.78 17.80,22.49 C17.55,22.20 17.98,19.39 17.85,18.92 C17.72,18.46 16.96,18.27 16.52,18.05 C16.09,17.83 13.78,17.15 13.68,16.81 C13.58,16.47 15.21,15.14 15.57,14.81 C15.92,14.48 16.91,14.04 17.06,13.68 C17.22,13.31 16.89,11.61 17.09,11.27 C17.28,10.93 18.53,10.42 18.93,10.39 C19.33,10.35 20.53,10.84 20.91,10.96 C21.29,11.07 22.21,11.37 22.57,11.49 C22.92,11.61 23.93,11.92 24.31,12.10" fill="#77c263"/></g><g transform="rotate(-10.1 20 20)" opacity="1"><path d="M11.892550153991925 15.277156051360025 Q14.30796551021561 12.75569407909461 16.723380866439292 15.200542267113969" fill="none" stroke="#122826" stroke-width="1.2792124974668024" stroke-linecap="round" opacity="1"/><path d="M22.79703610082441 15.51398298304994 Q25.215377576027066 12.81187842633306 27.633719051229722 15.693902486632572" fill="none" stroke="#122826" stroke-width="1.315956345400214" stroke-linecap="round" opacity="1"/><path d="M12.244439930887893 22.726158648839917 Q19.268335407227276 29.780844182036816 26.29223088356666 23.182530396134826" fill="none" stroke="#122826" stroke-width="1.68" stroke-linecap="round" opacity="1"/></g><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#122826" fill-rule="evenodd"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" style="display:block"><defs><clipPath id="avatar-clip-mooady"><rect width="40" height="40" rx="20"/></clipPath></defs><g clip-path="url(#avatar-clip-mooady)"><rect width="40" height="40" fill="#361437"/><g transform="rotate(203 20 20)"><path d="M28.84,24.73 C28.48,25.52 29.60,28.62 29.56,29.95 C29.52,31.28 29.23,36.77 28.48,37.51 C27.73,38.24 23.42,37.82 22.35,37.03 C21.28,36.24 18.96,30.79 18.22,29.93 C17.49,29.07 16.40,28.58 15.31,28.77 C14.21,28.97 9.07,31.81 7.73,31.79 C6.39,31.76 2.58,29.55 2.42,28.52 C2.26,27.49 5.35,22.98 6.16,21.91 C6.96,20.84 9.92,19.08 10.15,18.24 C10.38,17.39 8.60,14.89 8.39,13.79 C8.19,12.69 7.69,8.55 8.16,7.67 C8.62,6.79 11.85,5.46 12.88,5.31 C13.92,5.16 17.12,6.06 18.10,6.24 C19.09,6.41 21.48,6.77 22.33,6.99 C23.18,7.20 25.45,7.97 26.25,8.32 C27.05,8.68 29.14,9.90 30.01,10.38 C30.88,10.86 33.89,12.16 34.61,12.92 C35.34,13.68 37.11,16.68 36.95,17.66 C36.79,18.64 33.94,21.61 33.09,22.34 C32.25,23.08 29.21,23.94 28.84,24.73 M25.21,20.34 C24.88,20.43 24.35,20.68 24.08,20.97 C23.82,21.27 23.07,22.96 22.69,23.21 C22.31,23.46 20.77,23.63 20.46,23.39 C20.14,23.16 19.76,21.42 19.65,20.99 C19.54,20.56 19.52,19.55 19.40,19.23 C19.28,18.92 18.61,18.25 18.53,17.96 C18.45,17.66 18.55,16.73 18.60,16.40 C18.64,16.07 18.89,15.21 18.96,14.81 C19.03,14.40 19.04,12.85 19.27,12.52 C19.50,12.18 20.77,11.50 21.18,11.60 C21.59,11.69 22.85,13.12 23.17,13.41 C23.49,13.69 23.93,14.30 24.26,14.34 C24.59,14.38 25.92,13.74 26.32,13.78 C26.72,13.83 27.93,14.44 28.13,14.75 C28.33,15.05 28.27,16.33 28.27,16.73 C28.28,17.13 28.28,18.22 28.17,18.58 C28.06,18.93 27.52,19.94 27.21,20.13 C26.90,20.31 25.54,20.25 25.21,20.34" fill="#8e51b7"/></g><circle cx="14.370980076866225" cy="14.565547749190591" r="2.364498866468668" fill="#361437" opacity="1"/><circle cx="14.370980076866225" cy="14.565547749190591" r="0.7189376281125816" fill="#1a1a24" opacity="1"/><circle cx="25.00587818920426" cy="14.88047553191427" r="2.22114450019598" fill="#361437" opacity="1"/><circle cx="25.00587818920426" cy="14.88047553191427" r="0.6248986207485749" fill="#1a1a24" opacity="1"/><path d="M13.73226437166333 23.956509327800013 Q19.47947006970644 27.709226194285787 25.22667576774955 22.496249015745708" fill="none" stroke="#361437" stroke-width="1.44" stroke-linecap="round" opacity="1"/><path d="M0,0 h40 v40 h-40 Z M2.4,2.4 v35.2 h35.2 v-35.2 Z" fill="#361437" fill-rule="evenodd"/></g></svg></div>
-    <p class="gt-legend">peer to peer — nobody in the middle</p>
+    <p class="gt-legend">peer to peer - nobody in the middle</p>
     <canvas class="gt-canvas" aria-hidden="true"></canvas>
     <div class="gt-caption">
       <div class="gt-rule">Anyone walks in.</div>
-      <div class="gt-conseq">Open to the whole network — and to whatever else is out there looking for a door.</div>
+      <div class="gt-conseq">Open to the whole world, and to whatever else is out there looking for a door.</div>
     </div>
+    <p class="gt-pick">Five ways to lock a channel</p>
     <div class="gt-chips" role="group" aria-label="Ways to lock a channel">
         <button class="gt-chip" type="button" data-lock="0" aria-label="Public channel" aria-pressed="true">Open<i class="gt-fill"></i></button>
-        <button class="gt-chip" type="button" data-lock="1" aria-label="Password-protected channel" aria-pressed="false">Password<i class="gt-fill"></i></button>
+        <button class="gt-chip" type="button" data-lock="1" aria-label="Protected channel, one shared password" aria-pressed="false">Protected<i class="gt-fill"></i></button>
         <button class="gt-chip" type="button" data-lock="2" aria-label="Closed channel, invite only" aria-pressed="false">Closed<i class="gt-fill"></i></button>
         <button class="gt-chip" type="button" data-lock="3" aria-label="Gated channel, token or NFT" aria-pressed="false">Gated<i class="gt-fill"></i></button>
         <button class="gt-chip" type="button" data-lock="4" aria-label="Paid subscription channel" aria-pressed="false">Paid<i class="gt-fill"></i></button>
@@ -1182,7 +1193,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
   <div class="container hero-bottom">
     <div class="hero-actions">
       <a href="https://app.pombo.cc" class="btn btn-primary">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12c0 4.556-4.03 8.25-9 8.25a9.76 9.76 0 01-2.555-.337A5.97 5.97 0 015.41 20.97a5.97 5.97 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/></svg>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/></svg>
         Start chatting
       </a>
       <a href="https://app.pombo.cc#install" class="btn btn-ghost">
@@ -1206,7 +1217,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       <span class="eyebrow">Communities</span>
       <h2 class="sec-title">Rooms that feel alive.</h2>
       <p class="sec-desc">
-        Public channels for anything — your city, your game, the hobby nobody
+        Public channels for anything: your city, your game, the hobby nobody
         around you understands. Join in one tap and you are in the conversation.
       </p>
       <div class="points">
@@ -1304,11 +1315,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
           <h3 class="sec-title" style="font-size:clamp(1.6rem,3.4vw,2.2rem)">Your keys, your identity.</h3>
           <p class="sec-desc">
             Pombo generates an Ethereum key in your client and encrypts it at
-            rest. That key is your account — there is no row in a database
+            rest. That key is your account. There is no row in a database
             somewhere with your name on it.
           </p>
           <div class="points">
-            <div class="point"><div class="point-dot"></div><p><strong>Nobody can suspend you.</strong> There is no account to disable, because there is no account to begin with — only a key you hold.</p></div>
+            <div class="point"><div class="point-dot"></div><p><strong>Nobody can suspend you.</strong> There is no account to disable, because there is no account to begin with, only a key you hold.</p></div>
             <div class="point"><div class="point-dot"></div><p><strong>As many lives as you want.</strong> Separate identities for work, for a project, for the part of yourself that does not need to connect to the rest.</p></div>
             <div class="point"><div class="point-dot"></div><p><strong>It follows you.</strong> Channels, contacts and settings sync between your devices, encrypted end to end on the way.</p></div>
           </div>
@@ -1338,8 +1349,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
             how long messages are stored.
           </p>
           <div class="points">
-            <div class="point"><div class="point-dot"></div><p><strong>You set the rules.</strong> Permissions, encryption, and storage — all yours to configure.</p></div>
-            <div class="point"><div class="point-dot"></div><p><strong>You hold the keys.</strong> No one — including Pombo — can take your channels away.</p></div>
+            <div class="point"><div class="point-dot"></div><p><strong>You set the rules.</strong> Permissions, encryption and storage: all yours to configure.</p></div>
+            <div class="point"><div class="point-dot"></div><p><strong>You hold the keys.</strong> No one, including Pombo, can take your channels away.</p></div>
             <div class="point"><div class="point-dot"></div><p><strong>Pombo is just the interface.</strong> If Pombo disappears tomorrow, your channels still exist on the network.</p></div>
           </div>
         </div>
@@ -1416,7 +1427,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       <article class="type">
         <span class="type-badge">Token or NFT</span>
         <h3>Gated</h3>
-        <p>Hold the token or the NFT and the door opens by itself. Nothing is spent — it is a balance check.</p>
+        <p>Hold the token or the NFT and the door opens by itself. Nothing is spent. It is a balance check.</p>
       </article>
       <article class="type">
         <span class="type-badge">Subscription</span>
@@ -1436,7 +1447,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       <h2 class="sec-title">Charge for it. Keep it.</h2>
       <p class="sec-desc">
         Put a price and a period on a channel and it becomes a subscription.
-        Your writing, your signals, your community — behind a door you own.
+        Your writing, your signals, your community, behind a door you own.
       </p>
     </div>
     <div class="earn-figure reveal">
@@ -1449,7 +1460,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       <span class="earn-big">0%</span>
       <p class="earn-cap">is what Pombo takes from what you make.</p>
       <p class="earn-note">
-        It goes from your subscriber to you, wallet to wallet — no escrow, no balance to withdraw, nobody in the middle. Set the price in POL, USDC, DATA or a token of your own.
+        It goes from your subscriber to you, wallet to wallet. No escrow, no balance to withdraw, nobody in the middle. Set the price in POL, USDC, DATA or a token of your own.
       </p>
     </div>
   </div>
@@ -1482,7 +1493,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       </div>
       <div class="mock-body mock-body-sm">
         <div class="mgroup" data-who="kenji"><span class="mrail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" width="46" height="46" style="display:block"><defs><clipPath id="avatar-clip-3cn518-2"><rect width="46" height="46" rx="23"/></clipPath></defs><g clip-path="url(#avatar-clip-3cn518-2)"><rect width="46" height="46" fill="#2b2c13"/><g transform="rotate(1 23 23)"><path d="M42.09,20.21 C42.59,21.37 43.25,25.11 43.29,26.47 C43.33,27.82 43.01,31.96 42.49,33.23 C41.96,34.50 39.46,38.04 38.24,38.62 C37.03,39.20 32.18,38.89 30.81,38.81 C29.45,38.73 26.33,37.41 25.17,37.84 C24.00,38.27 21.09,42.05 19.60,42.93 C18.10,43.81 12.07,46.75 10.77,46.29 C9.47,45.83 7.09,40.31 7.12,38.50 C7.14,36.69 10.90,30.30 11.04,28.91 C11.19,27.52 9.80,26.16 8.52,25.11 C7.25,24.07 -0.21,20.38 -1.16,18.87 C-2.12,17.36 -1.83,11.51 -0.62,10.60 C0.60,9.70 8.64,10.11 10.50,10.19 C12.36,10.27 16.24,11.99 17.25,11.37 C18.27,10.76 19.23,5.62 20.27,4.27 C21.30,2.93 25.82,-1.41 27.19,-1.53 C28.56,-1.64 32.53,1.91 33.40,3.19 C34.27,4.47 35.02,9.49 35.54,10.76 C36.07,12.02 37.80,14.36 38.48,15.35 C39.16,16.33 41.59,19.06 42.09,20.21 M20.42,15.49 C20.83,15.23 22.56,13.79 22.99,13.80 C23.41,13.81 24.41,15.11 24.49,15.57 C24.58,16.03 23.81,17.76 23.79,18.19 C23.78,18.61 24.17,19.28 24.34,19.63 C24.51,19.99 25.41,21.20 25.43,21.60 C25.45,22.00 24.82,23.16 24.54,23.44 C24.25,23.73 23.09,24.23 22.71,24.36 C22.33,24.50 21.27,24.72 20.91,24.74 C20.54,24.75 19.57,24.51 19.20,24.48 C18.83,24.46 17.80,24.54 17.37,24.51 C16.94,24.47 15.34,24.43 15.05,24.17 C14.75,23.91 14.45,22.42 14.55,21.98 C14.65,21.54 15.91,20.34 16.00,19.97 C16.08,19.59 15.56,18.86 15.38,18.39 C15.20,17.93 14.15,15.92 14.27,15.52 C14.39,15.12 16.02,14.49 16.51,14.56 C17.01,14.64 18.64,16.13 19.05,16.23 C19.46,16.32 20.01,15.74 20.42,15.49" fill="#62cf83"/></g><g transform="rotate(-13.1 23 23)" opacity="1"><circle cx="16.364342815882058" cy="16.98908843233809" r="2.626624527116865" fill="#2b2c13" opacity="1"/><circle cx="16.364342815882058" cy="16.98908843233809" r="1.149214955090267" fill="#1a1a24" opacity="1"/><circle cx="27.875660170115065" cy="17.318550607230517" r="2.523358230093866" fill="#2b2c13" opacity="1"/><circle cx="27.875660170115065" cy="17.318550607230517" r="0.7309200564541837" fill="#1a1a24" opacity="1"/><line x1="16.823824729338288" y1="26.386417285117496" x2="30.01793411692977" y2="27.060483395138583" stroke="#2b2c13" stroke-width="1.9319999999999997" stroke-linecap="round" opacity="1"/></g><path d="M0,0 h46 v46 h-46 Z M2.76,2.76 v40.480000000000004 h40.480000000000004 v-40.480000000000004 Z" fill="#2b2c13" fill-rule="evenodd"/></g></svg></span><div class="mstack"><div class="mbub"><div class="msender" style="color:#62cf83">Kenji</div><div class="mtext">sending you the raw frames now</div><div class="mfoot"><span class="mtime">09:41</span></div></div></div></div>
-        <div class="mgroup" data-who="you"><span class="mrail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" width="46" height="46" style="display:block"><defs><clipPath id="avatar-clip-fqje8l"><rect width="46" height="46" rx="23"/></clipPath></defs><g clip-path="url(#avatar-clip-fqje8l)"><rect width="46" height="46" fill="#280e0f"/><g transform="rotate(341 23 23)"><path d="M9.46,31.17 C7.91,30.76 0.86,29.33 0.22,28.30 C-0.42,27.28 2.10,22.36 3.30,21.31 C4.51,20.27 10.96,19.16 11.76,18.25 C12.57,17.35 11.13,14.24 11.04,12.64 C10.95,11.05 10.14,3.90 10.92,2.97 C11.70,2.04 17.15,2.93 18.52,3.75 C19.89,4.57 22.93,10.36 24.04,10.85 C25.15,11.34 27.67,9.00 29.15,8.43 C30.64,7.85 37.19,4.86 38.31,5.32 C39.44,5.77 40.28,11.23 39.93,12.79 C39.57,14.34 35.00,19.03 34.88,20.24 C34.76,21.44 37.75,23.11 38.76,24.35 C39.77,25.59 44.63,30.89 44.55,32.10 C44.46,33.31 39.53,35.80 37.94,35.94 C36.35,36.08 30.48,33.19 29.30,33.44 C28.12,33.70 27.45,37.07 26.59,38.41 C25.72,39.75 22.18,46.01 21.00,46.31 C19.83,46.60 15.93,42.68 15.31,41.21 C14.68,39.74 15.62,33.26 15.02,32.22 C14.41,31.17 11.00,31.58 9.46,31.17 M13.00,27.54 C13.00,27.17 14.63,25.71 14.83,25.33 C15.03,24.95 14.82,24.14 14.92,23.87 C15.02,23.59 15.63,22.96 15.81,22.70 C15.99,22.45 16.48,21.84 16.68,21.44 C16.88,21.04 17.42,19.01 17.74,18.87 C18.06,18.74 19.41,19.92 19.79,20.14 C20.17,20.36 21.13,20.71 21.37,20.96 C21.62,21.21 22.07,22.20 22.14,22.53 C22.22,22.85 21.85,23.80 22.10,24.08 C22.35,24.36 24.36,24.89 24.57,25.20 C24.78,25.51 24.24,26.69 24.12,27.07 C23.99,27.45 23.61,28.58 23.35,28.86 C23.10,29.15 22.06,29.85 21.66,29.81 C21.27,29.76 19.92,28.44 19.56,28.44 C19.20,28.43 18.54,29.64 18.23,29.75 C17.93,29.86 16.98,29.55 16.62,29.46 C16.26,29.37 15.15,29.09 14.77,28.89 C14.39,28.69 12.99,27.91 13.00,27.54" fill="#95ba5e"/></g><line x1="13.414868632942111" y1="17.117711722725918" x2="19.45263629318527" y2="16.7835905387775" stroke="#280e0f" stroke-width="2.3212993082481623" stroke-linecap="round" opacity="1"/><line x1="25.511403046659012" y1="17.363406613163168" x2="30.93127710993606" y2="17.278598647123683" stroke="#280e0f" stroke-width="2.1516454916632175" stroke-linecap="round" opacity="1"/><line x1="16.152099447578195" y1="27.169485449824716" x2="28.748457258053122" y2="26.88483332620817" stroke="#280e0f" stroke-width="1.9319999999999997" stroke-linecap="round" opacity="1"/><path d="M0,0 h46 v46 h-46 Z M2.76,2.76 v40.480000000000004 h40.480000000000004 v-40.480000000000004 Z" fill="#280e0f" fill-rule="evenodd"/></g></svg></span><div class="mstack"><div class="mbub own"><div class="msender" style="color:#95ba5e">You</div><div class="mtext">got them — 240 MB, straight through 👌</div><div class="mfoot"><span class="mtime">09:42</span></div></div></div></div>
+        <div class="mgroup" data-who="you"><span class="mrail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" width="46" height="46" style="display:block"><defs><clipPath id="avatar-clip-fqje8l"><rect width="46" height="46" rx="23"/></clipPath></defs><g clip-path="url(#avatar-clip-fqje8l)"><rect width="46" height="46" fill="#280e0f"/><g transform="rotate(341 23 23)"><path d="M9.46,31.17 C7.91,30.76 0.86,29.33 0.22,28.30 C-0.42,27.28 2.10,22.36 3.30,21.31 C4.51,20.27 10.96,19.16 11.76,18.25 C12.57,17.35 11.13,14.24 11.04,12.64 C10.95,11.05 10.14,3.90 10.92,2.97 C11.70,2.04 17.15,2.93 18.52,3.75 C19.89,4.57 22.93,10.36 24.04,10.85 C25.15,11.34 27.67,9.00 29.15,8.43 C30.64,7.85 37.19,4.86 38.31,5.32 C39.44,5.77 40.28,11.23 39.93,12.79 C39.57,14.34 35.00,19.03 34.88,20.24 C34.76,21.44 37.75,23.11 38.76,24.35 C39.77,25.59 44.63,30.89 44.55,32.10 C44.46,33.31 39.53,35.80 37.94,35.94 C36.35,36.08 30.48,33.19 29.30,33.44 C28.12,33.70 27.45,37.07 26.59,38.41 C25.72,39.75 22.18,46.01 21.00,46.31 C19.83,46.60 15.93,42.68 15.31,41.21 C14.68,39.74 15.62,33.26 15.02,32.22 C14.41,31.17 11.00,31.58 9.46,31.17 M13.00,27.54 C13.00,27.17 14.63,25.71 14.83,25.33 C15.03,24.95 14.82,24.14 14.92,23.87 C15.02,23.59 15.63,22.96 15.81,22.70 C15.99,22.45 16.48,21.84 16.68,21.44 C16.88,21.04 17.42,19.01 17.74,18.87 C18.06,18.74 19.41,19.92 19.79,20.14 C20.17,20.36 21.13,20.71 21.37,20.96 C21.62,21.21 22.07,22.20 22.14,22.53 C22.22,22.85 21.85,23.80 22.10,24.08 C22.35,24.36 24.36,24.89 24.57,25.20 C24.78,25.51 24.24,26.69 24.12,27.07 C23.99,27.45 23.61,28.58 23.35,28.86 C23.10,29.15 22.06,29.85 21.66,29.81 C21.27,29.76 19.92,28.44 19.56,28.44 C19.20,28.43 18.54,29.64 18.23,29.75 C17.93,29.86 16.98,29.55 16.62,29.46 C16.26,29.37 15.15,29.09 14.77,28.89 C14.39,28.69 12.99,27.91 13.00,27.54" fill="#95ba5e"/></g><line x1="13.414868632942111" y1="17.117711722725918" x2="19.45263629318527" y2="16.7835905387775" stroke="#280e0f" stroke-width="2.3212993082481623" stroke-linecap="round" opacity="1"/><line x1="25.511403046659012" y1="17.363406613163168" x2="30.93127710993606" y2="17.278598647123683" stroke="#280e0f" stroke-width="2.1516454916632175" stroke-linecap="round" opacity="1"/><line x1="16.152099447578195" y1="27.169485449824716" x2="28.748457258053122" y2="26.88483332620817" stroke="#280e0f" stroke-width="1.9319999999999997" stroke-linecap="round" opacity="1"/><path d="M0,0 h46 v46 h-46 Z M2.76,2.76 v40.480000000000004 h40.480000000000004 v-40.480000000000004 Z" fill="#280e0f" fill-rule="evenodd"/></g></svg></span><div class="mstack"><div class="mbub own"><div class="msender" style="color:#95ba5e">You</div><div class="mtext">got them, 240 MB straight through 👌</div><div class="mfoot"><span class="mtime">09:42</span></div></div></div></div>
       </div>
       <div class="mock-foot">
         <div class="mock-input">Message kenji.eth</div>
@@ -1538,8 +1549,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                                 and history lives on storage nodes of your choice.
                             </p>
                             <p class="hood-panel-desc">
-                                Live signals — like who's online, who's typing, and peer-to-peer file
-                                transfers — travel through a separate ephemeral stream that leaves no trace.
+                                Live signals (who's online, who's typing, peer-to-peer file
+                                transfers) travel through a separate ephemeral stream that leaves no trace.
                             </p>
                         </div>
                         <div>
@@ -1573,7 +1584,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                                 <div class="arch-stream" style="margin-top: 1.5rem;">
                                     <div class="arch-stream-header">
                                         <span class="arch-stream-label">Ephemeral Stream</span>
-                                        <span class="arch-stream-id">Live only — no trace</span>
+                                        <span class="arch-stream-id">Live only, no trace</span>
                                     </div>
                                     <div class="partition-row">
                                         <span class="partition-num">P0</span>
@@ -1605,7 +1616,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                 <div class="hood-panel" id="panel-storage" role="tabpanel" aria-labelledby="tab-storage" hidden>
                     <div style="text-align:center; margin-bottom:2.5rem;">
                         <h3 class="own-title" style="font-size:1.5rem;">Your messages,<br>your storage choice.</h3>
-                        <p class="hood-panel-desc" style="max-width:560px; margin:0 auto;">Private messages travel fully encrypted across the network. Storage nodes hold public and encrypted data — but they can never read your private content.</p>
+                        <p class="hood-panel-desc" style="max-width:560px; margin:0 auto;">Private messages travel fully encrypted across the network. Storage nodes hold public and encrypted data, but they can never read your private content.</p>
                     </div>
 
                     <!-- Flow -->
@@ -1659,7 +1670,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                                 <h3>Pombo Official</h3>
                                 <span class="storage-option-tag tag-default">Default</span>
                             </div>
-                            <p>Official storage cluster operated by Pombo. Zero configuration needed — just start chatting.</p>
+                            <p>Official storage cluster operated by Pombo. Zero configuration needed. Just start chatting.</p>
                             <div class="storage-option-features">
                                 <div class="storage-option-feature">
                                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 12.75l6 6 9-13.5"/></svg>
@@ -1736,7 +1747,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                                     </div>
                                     <div>
                                         <h4>Direct Messages</h4>
-                                        <p>DMs use key agreement between your account and the recipient's — both sides independently compute a shared secret that no one else can derive.</p>
+                                        <p>DMs use key agreement between your account and the recipient's. Both sides independently compute a shared secret that no one else can derive.</p>
                                     </div>
                                 </div>
                                 <div class="security-item">
@@ -1797,7 +1808,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                         <div class="storage-callout-icon" style="background:rgba(234,179,8,0.1); color:#eab308;">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
                         </div>
-                        <p><strong style="color:#eab308;">Strong passwords matter.</strong> They protect your channels, your account and your backups — and there is no "Forgot password" button.</p>
+                        <p><strong style="color:#eab308;">Strong passwords matter.</strong> They protect your channels, your account and your backups, and there is no "Forgot password" button.</p>
                     </div>
                 </div>
 
@@ -1807,7 +1818,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                         <div>
                             <h3 class="own-title" style="font-size:1.5rem;">Push notifications.<br>Privacy layer added.</h3>
                             <p class="hood-panel-desc">
-                                Notifications still reach your phone through Google or Apple — every app needs that last mile.
+                                Notifications still reach your phone through Google or Apple. Every app needs that last mile.
                                 The difference is what they learn. In most apps they see who is messaging whom, and when. Here a relay layer strips that before it reaches them.
                             </p>
                             <div class="push-features-new">
@@ -1817,7 +1828,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                                     </div>
                                     <div>
                                         <strong>K-Anonymity</strong>
-                                        <span>Tags are truncated so the relay sends the wake to every device that matches — hundreds at once. Google and Apple deliver it to all of them. Only each device knows if it's the real recipient.</span>
+                                        <span>Tags are truncated so the relay sends the wake to every device that matches, hundreds at once. Google and Apple deliver it to all of them. Only each device knows if it's the real recipient.</span>
                                     </div>
                                 </div>
                                 <div class="push-feature-new">
@@ -1826,7 +1837,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                                     </div>
                                     <div>
                                         <strong>Proof-of-Work Anti-Spam</strong>
-                                        <span>Sending a notification requires solving a computational puzzle — no accounts, no API keys, just math.</span>
+                                        <span>Sending a notification requires solving a computational puzzle. No accounts, no API keys, just math.</span>
                                     </div>
                                 </div>
                                 <div class="push-feature-new">
@@ -1861,19 +1872,23 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/></svg>
                                 </div>
                                 <div class="push-flow-v-step">
-                                    <div class="push-flow-v-node">Google FCM / Apple APNs<br><span class="push-flow-v-detail">delivers push to all of them — can't tell who's the real one</span></div>
+                                    <div class="push-flow-v-node">Google FCM / Apple APNs<br><span class="push-flow-v-detail">delivers push to all of them, can't tell who's the real one</span></div>
                                 </div>
                                 <div class="push-flow-v-arrow">
                                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/></svg>
                                 </div>
                                 <div class="push-flow-v-step">
-                                    <div class="push-flow-v-node push-flow-v-success">Bob's device recognizes it<br><span class="push-flow-v-detail">others silently discard — only Bob sees the notification</span></div>
+                                    <div class="push-flow-v-node push-flow-v-success">Bob's device recognizes it<br><span class="push-flow-v-detail">others silently discard, only Bob sees the notification</span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <button class="hood-top" type="button">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg>
+                <span>Back to the menu</span>
+            </button>
         </div>
     </section>
 
@@ -1885,7 +1900,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     <div class="sec-head reveal">
       <span class="eyebrow">On the way</span>
       <h2 class="sec-title">What we are building next.</h2>
-      <p class="sec-desc">Not shipped yet — listed here so you know where this is going.</p>
+      <p class="sec-desc">Not shipped yet. Listed here so you know where this is going.</p>
     </div>
     <div class="tl reveal">
       <div class="tl-item">
@@ -1902,7 +1917,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       </div>
       <div class="tl-item">
         <div class="tl-head"><h3>Live streaming</h3><span class="tl-soon">Soon</span></div>
-        <p>Broadcast to a channel in real time — including one people subscribe to.</p>
+        <p>Broadcast to a channel in real time, including one people subscribe to.</p>
       </div>
       <div class="tl-item">
         <div class="tl-head"><h3>Sponsor your channel</h3><span class="tl-soon">Soon</span></div>
@@ -1926,7 +1941,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     <div class="faq reveal">
       <details>
         <summary>Do I need to know anything about crypto?</summary>
-        <p>To talk, no. A key is made for you in the background. You touch the chain three times: setting up your inbox, creating a channel, and subscribing to a paid one — and the app shows the cost first.</p>
+        <p>To talk, no. A key is made for you in the background. You touch the chain three times: setting up your inbox, creating a channel, and subscribing to a paid one, and the app shows the cost first.</p>
       </details>
       <details>
         <summary>What does Pombo cost?</summary>
@@ -1938,11 +1953,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       </details>
       <details>
         <summary>What happens if Pombo shuts down?</summary>
-        <p>Your channels are registered on-chain, and your history lives on the storage cluster you chose — the default one, or a node you run. Neither is a Pombo server, because there is none. The protocol and the clients are open, so anyone can build another way in.</p>
+        <p>Your channels are registered on-chain, and your history lives on the storage cluster you chose: the default one, or a node you run. Neither is a Pombo server, because there is none. The protocol and the clients are open, so anyone can build another way in.</p>
       </details>
       <details>
         <summary>Can I use it on my phone?</summary>
-        <p>Two ways. It runs in any modern browser and installs to your home screen. There is also a native Android client — real Kotlin, not a wrapped page — on the same protocol, so both talk on the same channels. It is in beta, so it comes as an <a href="https://github.com/Ocnrb/Pombo-Android/releases/latest" target="_blank" rel="noopener" style="color:var(--accent)">APK from GitHub</a> rather than from a store.</p>
+        <p>Two ways. It runs in any modern browser and installs to your home screen. There is also a native Android client (real Kotlin, not a wrapped page) on the same protocol, so both talk on the same channels. It is in beta, so it comes as an <a href="https://github.com/Pombo-app/Pombo-Android/releases/latest" target="_blank" rel="noopener" style="color:var(--accent)">APK from GitHub</a> rather than from a store.</p>
       </details>
     </div>
   </div>
@@ -1970,8 +1985,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       <a href="https://app.pombo.cc/#/channel/0xae340e799e8151f6a4999d245e466197aa217667/9862eb7bd898f338-1">Official channel</a>
       <a href="https://docs.pombo.cc" target="_blank" rel="noopener">Docs</a>
       <a href="https://x.com/app_Pombo" target="_blank" rel="noopener me">X</a>
-      <a href="https://github.com/Ocnrb/Pombo-Android/releases/latest" target="_blank" rel="noopener">Android APK</a>
-      <a href="https://github.com/Ocnrb" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Pombo-app/Pombo-Android/releases/latest" target="_blank" rel="noopener">Android APK</a>
+      <a href="https://github.com/Pombo-app" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </div>
 </footer>
@@ -1981,10 +1996,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"Do I need to know anything about crypto?","acceptedAnswer":{"@type":"Answer","text":"To talk, no. A key is made for you in the background. You touch the chain three times: setting up your inbox, creating a channel, and subscribing to a paid one — and the app shows the cost first."}},
+    {"@type":"Question","name":"Do I need to know anything about crypto?","acceptedAnswer":{"@type":"Answer","text":"To talk, no. A key is made for you in the background. You touch the chain three times: setting up your inbox, creating a channel, and subscribing to a paid one, and the app shows the cost first."}},
     {"@type":"Question","name":"What does Pombo cost?","acceptedAnswer":{"@type":"Answer","text":"Using it is free. Creating a channel costs a Polygon network fee paid to the network. Paid channels charge what their owner sets, and all of it reaches the owner."}},
     {"@type":"Question","name":"Who can read my messages?","acceptedAnswer":{"@type":"Answer","text":"The people in the room. Direct messages and private channels are encrypted on your device before they go anywhere, and the keys stay there."}},
-    {"@type":"Question","name":"What happens if Pombo shuts down?","acceptedAnswer":{"@type":"Answer","text":"Channels are registered on-chain, and history lives on the storage cluster you chose — the default one, or a node you run. There is no Pombo server, and the protocol and clients are open."}},
+    {"@type":"Question","name":"What happens if Pombo shuts down?","acceptedAnswer":{"@type":"Answer","text":"Channels are registered on-chain, and history lives on the storage cluster you chose: the default one, or a node you run. There is no Pombo server, and the protocol and clients are open."}},
     {"@type":"Question","name":"Can I use it on my phone?","acceptedAnswer":{"@type":"Answer","text":"Two ways. It runs in any modern browser and installs to your home screen. There is also a native Android client on the same protocol, so both talk on the same channels. It is in beta and comes as an APK from GitHub."}}
   ]
 }
@@ -2009,6 +2024,21 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       toggle.setAttribute('aria-expanded','false');
     }
   });
+
+  (function(){
+    var hood = document.getElementById('hood');
+    var btn = hood && hood.querySelector('.hood-top');
+    var tabs = hood && hood.querySelector('.hood-tabs');
+    var nav = document.querySelector('.nav');
+    if (!btn || !hood || !tabs) return;
+
+    btn.addEventListener('click', function(){
+      var gap = (nav ? nav.getBoundingClientRect().height : 0) + 12;
+      var y = window.pageYOffset + tabs.getBoundingClientRect().top - gap;
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: Math.max(0, y), behavior: still ? 'auto' : 'smooth' });
+    });
+  })();
 
   document.querySelectorAll('[role="tablist"]').forEach(function(list){
     var tabs = [].slice.call(list.querySelectorAll('[role="tab"]'));
@@ -2400,16 +2430,16 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
   var LOCKS = [
     { color:'#59c9a5', cred:null, pass:1,
       rule:'Anyone walks in.',
-      conseq:'Open to the whole network — and to whatever else is out there looking for a door.' },
+      conseq:'Open to the whole network, and to whatever else is out there looking for a door.' },
     { color:'#f0a05a', cred:'key', pass:0.88,
       rule:'One shared password.',
       conseq:'The room is encrypted with it, so only the people who have it read a word.' },
     { color:'#7fb4f5', cred:'list', pass:0.62,
       rule:'You keep the guest list.',
-      conseq:'Members are approved by address, and the chain is what enforces it, not us.' },
+      conseq:'Members are approved by address, and the protocol is what enforces it, not us.' },
     { color:'#c9a2f5', cred:'coin', pass:0.6,
       rule:'Hold the token. Or the NFT.',
-      conseq:'Nothing is spent — holding is enough. A spam farm needs one funded wallet per bot.' },
+      conseq:'Nothing is spent. Holding is enough. A spam farm needs one funded wallet per bot.' },
     { color:'#F6851B', cred:'sub', pass:0.55,
       rule:'A subscription, at your price.',
       conseq:'It goes wallet to wallet, straight to the owner. Pombo takes none of it.' }
@@ -2455,8 +2485,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     cv.width = Math.round(w * dpr);
     cv.height = Math.round(hgt * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    line = Math.round(H * 0.74);
-    FIELD = Math.min(W, 1000);
+    line = Math.round(H * 0.80);
+    FIELD = Math.min(W, 700);
     FX = (W - FIELD) / 2;
 
     // seat the crowd for the room we actually have, not for a desktop
@@ -2505,7 +2535,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     }
       // try a number of spots and keep the emptiest, rather than the last one
     var bw = Math.max(1, FIELD - 80), bh = Math.max(1, line - 80);
-    var bestX = 0, bestY = 0, bestGap = -1;
+    var bestX = FX + FIELD / 2, bestY = line / 2, bestGap = -Infinity;
     for (var t = 0; t < 26; t++) {
       var cx = FX + 40 + Math.random() * bw, cy = 26 + Math.random() * bh;
       var gap = 1e9;
@@ -2720,6 +2750,32 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     ctx.fill();
   }
 
+  function coinAt(x, y, k, alpha){
+    ctx.globalAlpha = alpha * 0.18;
+    ctx.beginPath();
+    ctx.arc(x, y, 12 * k, 0, 6.2832);
+    ctx.fillStyle = COIN;
+    ctx.fill();
+
+    ctx.globalAlpha = alpha;
+    ctx.beginPath();
+    ctx.arc(x, y, 6.4 * k, 0, 6.2832);
+    ctx.fillStyle = COIN;
+    ctx.fill();
+
+    ctx.globalAlpha = alpha * 0.55;
+    ctx.strokeStyle = 'rgba(0,0,0,0.55)';
+    ctx.lineWidth = 1.3 * k;
+    ctx.beginPath();
+    ctx.arc(x, y, 6.4 * k, 0, 6.2832);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(x, y, 2.7 * k, 0, 6.2832);
+    ctx.stroke();
+
+    ctx.globalAlpha = alpha;
+  }
+
   function body(p, L){
     var img = faces[p.face];
     if (p.bot) {
@@ -2740,12 +2796,17 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       ctx.fillStyle = 'rgba(255,255,255,0.3)';
       ctx.fill();
     }
-    if (p.cred && p.state === 'up') {
+    var holding = L.cred === 'coin' && p.cred === 'coin';
+    if (p.cred && p.state === 'up' && !holding) {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r + 3, 0, 6.2832);
       ctx.strokeStyle = L.color;
       ctx.lineWidth = 1.2;
       ctx.stroke();
+    }
+    if (holding && p.state !== 'out') {
+      var k = Math.max(0.6, Math.min(1, p.r / 13));
+      coinAt(p.x + p.r * 0.92, p.y + p.r * 0.82, k, Math.max(0, p.a));
     }
     if (p.owner) {
       if (p.paid > 0) {
@@ -2811,27 +2872,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
         var cy2 = coins[c2].y + (owner.y - coins[c2].y) * ee - Math.sin(ee * Math.PI) * 34;
         var fade = Math.min(1, Math.sin(e2 * Math.PI) * 3);
 
-        ctx.globalAlpha = fade * 0.18;
-        ctx.beginPath();
-        ctx.arc(cx2, cy2, 12, 0, 6.2832);
-        ctx.fillStyle = COIN;
-        ctx.fill();
-
-        ctx.globalAlpha = fade;
-        ctx.beginPath();
-        ctx.arc(cx2, cy2, 6.4, 0, 6.2832);
-        ctx.fillStyle = COIN;
-        ctx.fill();
-
-        ctx.globalAlpha = fade * 0.55;
-        ctx.beginPath();
-        ctx.arc(cx2, cy2, 6.4, 0, 6.2832);
-        ctx.strokeStyle = 'rgba(0,0,0,0.55)';
-        ctx.lineWidth = 1.3;
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.arc(cx2, cy2, 2.7, 0, 6.2832);
-        ctx.stroke();
+        coinAt(cx2, cy2, 1, fade);
       }
     }
 
