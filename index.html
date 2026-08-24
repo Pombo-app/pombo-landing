@@ -893,12 +893,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
             animation: panelIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
         }
 .hood-panel[hidden]{display:none}
-.hood-top{position:fixed;right:1rem;bottom:1rem;z-index:40;display:none;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;padding:0;border-radius:999px;background:rgba(14,14,18,0.9);border:1px solid var(--border-l);color:var(--text-2);cursor:pointer;opacity:0;transform:translateY(0.4rem);pointer-events:none;transition:opacity .22s,transform .22s,color .22s;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.hood-top{position:fixed;right:1rem;bottom:1rem;z-index:40;display:none;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;padding:0;border-radius:999px;background:rgba(14,14,18,0.92);border:1px solid var(--border-l);color:var(--text-2);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s,color .2s;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hood-top svg{width:1.15rem;height:1.15rem;display:block}
-.hood-top.on{opacity:1;transform:none;pointer-events:auto}
+.hood-top.on{opacity:1;pointer-events:auto}
 .hood-top:active{color:var(--text-1)}
 @media (max-width:767px){.hood-top{display:flex}}
-@media (prefers-reduced-motion:reduce){.hood-top{transition:none}}
 /* Hood panel layouts */
         .hood-two-col {
             display: grid;
@@ -2022,16 +2021,15 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
   });
 
   (function(){
-    var btn = document.querySelector('.hood-top');
     var hood = document.getElementById('hood');
+    var btn = hood && hood.querySelector('.hood-top');
     var tabs = hood && hood.querySelector('.hood-tabs');
     var nav = document.querySelector('.nav');
     if (!btn || !hood || !tabs) return;
 
     function update(){
       var s = hood.getBoundingClientRect();
-      var m = tabs.getBoundingClientRect();
-      btn.classList.toggle('on', m.bottom < 0 && s.bottom > 140);
+      btn.classList.toggle('on', s.top < window.innerHeight * 0.4 && s.bottom > 160);
     }
 
     btn.addEventListener('click', function(){
