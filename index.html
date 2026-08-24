@@ -2541,7 +2541,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     }
       // try a number of spots and keep the emptiest, rather than the last one
     var bw = Math.max(1, FIELD - 80), bh = Math.max(1, line - 80);
-    var bestX = 0, bestY = 0, bestGap = -1;
+    var bestX = FX + FIELD / 2, bestY = line / 2, bestGap = -Infinity;
     for (var t = 0; t < 26; t++) {
       var cx = FX + 40 + Math.random() * bw, cy = 26 + Math.random() * bh;
       var gap = 1e9;
