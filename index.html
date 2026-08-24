@@ -893,10 +893,9 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
             animation: panelIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
         }
 .hood-panel[hidden]{display:none}
-.hood-top{position:fixed;right:1rem;bottom:1rem;z-index:40;display:none;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;padding:0;border-radius:999px;background:rgba(14,14,18,0.92);border:1px solid var(--border-l);color:var(--text-2);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s,color .2s;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-.hood-top svg{width:1.15rem;height:1.15rem;display:block}
-.hood-top.on{opacity:1;pointer-events:auto}
-.hood-top:active{color:var(--text-1)}
+.hood-top{display:none;margin:2.75rem auto 0;align-items:center;gap:0.45rem;padding:0.85rem 1.25rem;border-radius:999px;background:transparent;border:1px solid var(--border);color:var(--text-3);font-family:inherit;font-size:0.78rem;font-weight:600;letter-spacing:0.03em;cursor:pointer;transition:color .2s,border-color .2s}
+.hood-top svg{width:0.95rem;height:0.95rem;display:block}
+.hood-top:hover,.hood-top:active{color:var(--text-1);border-color:var(--border-l)}
 @media (max-width:767px){.hood-top{display:flex}}
 /* Hood panel layouts */
         .hood-two-col {
@@ -1881,10 +1880,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                     </div>
                 </div>
             </div>
+            <button class="hood-top" type="button">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg>
+                <span>Back to the menu</span>
+            </button>
         </div>
-        <button class="hood-top" type="button" aria-label="Back to the section menu">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg>
-        </button>
     </section>
 
     <!-- CTA -->
@@ -2027,21 +2027,12 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     var nav = document.querySelector('.nav');
     if (!btn || !hood || !tabs) return;
 
-    function update(){
-      var s = hood.getBoundingClientRect();
-      btn.classList.toggle('on', s.top < window.innerHeight * 0.4 && s.bottom > 160);
-    }
-
     btn.addEventListener('click', function(){
       var gap = (nav ? nav.getBoundingClientRect().height : 0) + 12;
       var y = window.pageYOffset + tabs.getBoundingClientRect().top - gap;
       var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top: Math.max(0, y), behavior: still ? 'auto' : 'smooth' });
     });
-
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    update();
   })();
 
   document.querySelectorAll('[role="tablist"]').forEach(function(list){
