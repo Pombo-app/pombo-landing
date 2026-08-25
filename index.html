@@ -1107,7 +1107,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
   "url": "https://pombo.cc",
   "applicationCategory": "CommunicationApplication",
   "operatingSystem": "Web, Android",
-  "description": "Decentralized encrypted social app: communities, private direct messages, and channels you can charge for, with no sign-up, no phone number, and no central servers.",
+  "description": "Decentralized encrypted social app: communities, private direct messages, and channels you can charge for, with no sign-up, no phone number, and no backend.",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -1274,8 +1274,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
         <p>A key is made on your device the moment you open the app. No email, no phone number, no password.</p>
       </div>
       <div class="pillar">
-        <div class="pillar-num">No central servers</div>
-        <p>Messages travel across a peer-to-peer network. There is no Pombo server to hack, subpoena, or switch off.</p>
+        <div class="pillar-num">Anyone can run the infrastructure</div>
+        <p>Messages travel across a peer-to-peer network. No server sits between you and the people you talk to, and the infrastructure that carries them only ever handles ciphertext.</p>
       </div>
       <div class="pillar">
         <div class="pillar-num">Nothing to take on trust</div>
@@ -1537,7 +1537,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
                 <div class="hood-panel" id="panel-architecture" role="tabpanel" aria-labelledby="tab-architecture">
                     <div class="hood-two-col">
                         <div>
-                            <h3 class="own-title" style="font-size:1.5rem;">Multiple Streams.<br>No central servers</h3>
+                            <h3 class="own-title" style="font-size:1.5rem;">Multiple Streams.<br>No backend</h3>
                             <p class="hood-panel-desc">
                                 When you create a channel, a set of smart contracts is deployed on Polygon PoS.
                                 They manage permissions, metadata, and ownership of its data streams
@@ -1953,7 +1953,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
       </details>
       <details>
         <summary>What happens if Pombo shuts down?</summary>
-        <p>Your channels are registered on-chain, and your history lives on the storage cluster you chose: the default one, or a node you run. Neither is a Pombo server, because there is none. The protocol and the clients are open, so anyone can build another way in.</p>
+        <p>Your channels are registered on-chain, and your history lives on the storage cluster you chose: the one Pombo runs, or any other you want. Neither is part of the app, and both are replaceable. The protocol and the clients are open, so anyone can build another way in.</p>
       </details>
       <details>
         <summary>Can I use it on my phone?</summary>
@@ -1999,7 +1999,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;font-size:0.875rem;co
     {"@type":"Question","name":"Do I need to know anything about crypto?","acceptedAnswer":{"@type":"Answer","text":"To talk, no. A key is made for you in the background. You touch the chain three times: setting up your inbox, creating a channel, and subscribing to a paid one, and the app shows the cost first."}},
     {"@type":"Question","name":"What does Pombo cost?","acceptedAnswer":{"@type":"Answer","text":"Using it is free. Creating a channel costs a Polygon network fee paid to the network. Paid channels charge what their owner sets, and all of it reaches the owner."}},
     {"@type":"Question","name":"Who can read my messages?","acceptedAnswer":{"@type":"Answer","text":"The people in the room. Direct messages and private channels are encrypted on your device before they go anywhere, and the keys stay there."}},
-    {"@type":"Question","name":"What happens if Pombo shuts down?","acceptedAnswer":{"@type":"Answer","text":"Channels are registered on-chain, and history lives on the storage cluster you chose: the default one, or a node you run. There is no Pombo server, and the protocol and clients are open."}},
+    {"@type":"Question","name":"What happens if Pombo shuts down?","acceptedAnswer":{"@type":"Answer","text":"Channels are registered on-chain, and history lives on the storage cluster you chose: the one Pombo runs, or any other you want. Neither is part of the app, and the protocol and clients are open."}},
     {"@type":"Question","name":"Can I use it on my phone?","acceptedAnswer":{"@type":"Answer","text":"Two ways. It runs in any modern browser and installs to your home screen. There is also a native Android client on the same protocol, so both talk on the same channels. It is in beta and comes as an APK from GitHub."}}
   ]
 }
